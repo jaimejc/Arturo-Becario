@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>657</x>
-      <y>252</y>
+      <x>900</x>
+      <y>621</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -16,8 +16,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>945</x>
-      <y>252</y>
+      <x>1188</x>
+      <y>621</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -28,8 +28,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>342</x>
-      <y>396</y>
+      <x>585</x>
+      <y>765</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -40,8 +40,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>36</x>
-      <y>288</y>
+      <x>279</x>
+      <y>657</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -52,8 +52,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
-      <y>594</y>
+      <x>315</x>
+      <y>963</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -64,8 +64,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>612</x>
-      <y>594</y>
+      <x>855</x>
+      <y>963</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -76,8 +76,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>342</x>
-      <y>594</y>
+      <x>585</x>
+      <y>963</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -88,8 +88,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>423</y>
+      <x>765</x>
+      <y>792</y>
       <w>207</w>
       <h>189</h>
     </coordinates>
@@ -99,8 +99,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>423</x>
-      <y>450</y>
+      <x>666</x>
+      <y>819</y>
       <w>27</w>
       <h>162</h>
     </coordinates>
@@ -110,8 +110,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>153</x>
-      <y>423</y>
+      <x>396</x>
+      <y>792</y>
       <w>207</w>
       <h>189</h>
     </coordinates>
@@ -121,8 +121,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>801</x>
-      <y>63</y>
+      <x>1044</x>
+      <y>432</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -133,8 +133,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>738</x>
-      <y>81</y>
+      <x>981</x>
+      <y>450</y>
       <w>81</w>
       <h>189</h>
     </coordinates>
@@ -144,12 +144,75 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>981</x>
-      <y>81</y>
+      <x>1224</x>
+      <y>450</y>
       <w>81</w>
       <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0;70.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>243</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>/Objeto/
+-
+- nombre: String
+- descripcion: String
+- id: int
+- precio: double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>405</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>ObjetoVenta
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>405</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>ObjetoIntercambio
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>261</y>
+      <w>117</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>261</y>
+      <w>117</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;160.0</additional_attributes>
   </element>
 </diagram>
