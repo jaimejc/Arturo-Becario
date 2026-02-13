@@ -16,7 +16,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
+      <x>945</x>
       <y>252</y>
       <w>189</w>
       <h>63</h>
@@ -121,7 +121,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
+      <x>801</x>
       <y>63</y>
       <w>189</w>
       <h>63</h>
@@ -129,5 +129,27 @@
     <panel_attributes>/Cliente/
 -</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>81</y>
+      <w>81</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>981</x>
+      <y>81</y>
+      <w>81</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;190.0</additional_attributes>
   </element>
 </diagram>
