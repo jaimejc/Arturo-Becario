@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
   <zoom_level>9</zoom_level>
@@ -25,7 +24,6 @@
       <h>144</h>
     </coordinates>
     <panel_attributes>/Usuario/
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <diagram>
 <zoom_level>11</zoom_level>
@@ -45,7 +43,6 @@
 <id>UMLClass</id>
 <coordinates><x>693</x><y>242</y><w>231</w><h>176</h></coordinates>
 <panel_attributes>/Usuario/
->>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - nombre : String
 - nickName : String
