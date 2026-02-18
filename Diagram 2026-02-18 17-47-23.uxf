@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
   <zoom_level>9</zoom_level>
@@ -24,6 +25,27 @@
       <h>144</h>
     </coordinates>
     <panel_attributes>/Usuario/
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram>
+<zoom_level>11</zoom_level>
+
+<!-- CLASES PRINCIPALES -->
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>1265</x><y>330</y><w>231</w><h>66</h></coordinates>
+<panel_attributes>Tienda
+--
+--
+</panel_attributes>
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>693</x><y>242</y><w>231</w><h>176</h></coordinates>
+<panel_attributes>/Usuario/
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - nombre : String
 - nickName : String
@@ -34,6 +56,7 @@
 - idUnico : String
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -143,12 +166,48 @@
       <h>117</h>
     </coordinates>
     <panel_attributes>ClienteNoRegistrado
+=======
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>693</x><y>539</y><w>231</w><h>77</h></coordinates>
+<panel_attributes>Empleado
+--
+--
+</panel_attributes>
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>946</x><y>539</y><w>231</w><h>77</h></coordinates>
+<panel_attributes>ClienteRegistrado
+--
+--
+</panel_attributes>
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>440</x><y>539</y><w>231</w><h>77</h></coordinates>
+<panel_attributes>Gestor
+--
+--
+</panel_attributes>
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>693</x><y>0</y><w>231</w><h>143</h></coordinates>
+<panel_attributes>ClienteNoRegistrado
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - nombre : String
 - dni : String
 - pasaporte : String
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -172,6 +231,16 @@
       <h>99</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
+=======
+</element>
+
+<!-- ENUM PERMISOS -->
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>693</x><y>671</y><w>231</w><h>121</h></coordinates>
+<panel_attributes>&lt;&lt;enum&gt;&gt;
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 TipoPermiso
 --
 + INTERCAMBIO
@@ -179,6 +248,7 @@ TipoPermiso
 + PRODUCTO
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -371,6 +441,16 @@ busqueda</panel_attributes>
       <h>234</h>
     </coordinates>
     <panel_attributes>/Producto/
+=======
+</element>
+
+<!-- PRODUCTO -->
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>1254</x><y>803</y><w>231</w><h>286</h></coordinates>
+<panel_attributes>/Producto/
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - nombre : String
 - descripcion : String
@@ -381,6 +461,7 @@ busqueda</panel_attributes>
 - segundaMano : Boolean
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -415,11 +496,22 @@ busqueda</panel_attributes>
       <h>144</h>
     </coordinates>
     <panel_attributes>/Descuento/
+=======
+</element>
+
+<!-- DESCUENTO -->
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>704</x><y>990</y><w>231</w><h>176</h></coordinates>
+<panel_attributes>/Descuento/
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - fechaInicio : LocalTime
 - fechaFin : LocalTime
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -462,10 +554,19 @@ busqueda</panel_attributes>
       <h>63</h>
     </coordinates>
     <panel_attributes>Rebaja
+=======
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>143</x><y>1188</y><w>231</w><h>77</h></coordinates>
+<panel_attributes>Rebaja
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - porcentaje : double
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -477,11 +578,20 @@ busqueda</panel_attributes>
       <h>63</h>
     </coordinates>
     <panel_attributes>MasXMenos
+=======
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>143</x><y>1320</y><w>231</w><h>77</h></coordinates>
+<panel_attributes>MasXMenos
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - numProducto : int
 - numAPagar : int
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -627,10 +737,21 @@ estado</panel_attributes>
       <h>144</h>
     </coordinates>
     <panel_attributes>Carrito
+=======
+</element>
+
+<!-- CARRITO -->
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>935</x><y>1441</y><w>231</w><h>176</h></coordinates>
+<panel_attributes>Carrito
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 --
 - caducidad : LocalTime
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -770,6 +891,25 @@ pedido</panel_attributes>
       <h>171</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
+=======
+</element>
+
+<!-- PEDIDO -->
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>1958</x><y>792</y><w>231</w><h>209</h></coordinates>
+<panel_attributes>Pedido
+--
+--
+</panel_attributes>
+</element>
+
+<element>
+<id>UMLClass</id>
+<coordinates><x>1958</x><y>1089</y><w>231</w><h>209</h></coordinates>
+<panel_attributes>&lt;&lt;enum&gt;&gt;
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
 EstadoPedido
 --
 + EN_PREPARACIÓN
@@ -778,6 +918,7 @@ EstadoPedido
 + FINALIZADO
 --
 </panel_attributes>
+<<<<<<< HEAD
     <additional_attributes/>
   </element>
   <element>
@@ -988,3 +1129,8 @@ tipoDeCategoria</panel_attributes>
     <additional_attributes>250;220;250;10;10;10</additional_attributes>
   </element>
 </diagram>
+=======
+</element>
+
+</diagram>
+>>>>>>> 07c711df2aecbe4b26ba5c6f6579bb1a10a0238f
