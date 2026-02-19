@@ -10,14 +10,7 @@
       <h>112</h>
     </coordinates>
     <panel_attributes>Gestor
--
-- usuario: String
-- contraseña: String
---
-+ cambiarCaducidadCarrito(): Boolean
-+ cambiarCaducidadIntercambio(): Boolean
-+ addProducto(String nombre, String descripcion, double precio, ImageIcon foto, int nStock): Boolean
-+ eliminarProducto(Producto p): Boolean</panel_attributes>
+-</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
