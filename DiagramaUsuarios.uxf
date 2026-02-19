@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>8</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
+      <x>702</x>
       <y>240</y>
-      <w>168</w>
-      <h>128</h>
+      <w>126</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>/Usuario/
 --
@@ -25,21 +25,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>704</x>
-      <y>360</y>
-      <w>528</w>
-      <h>144</h>
+      <x>528</x>
+      <y>330</y>
+      <w>444</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>400.0;10.0;400.0;70.0;640.0;70.0;640.0;160.0;640.0;70.0;10.0;70.0;10.0;160.0;10.0;70.0;400.0;70.0;400.0;160.0</additional_attributes>
+    <additional_attributes>400.0;10.0;400.0;70.0;720.0;70.0;720.0;160.0;720.0;70.0;10.0;70.0;10.0;110.0;10.0;70.0;400.0;70.0;400.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1096</x>
-      <y>320</y>
-      <w>272</w>
-      <h>32</h>
+      <x>822</x>
+      <y>300</y>
+      <w>204</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=* usuarios</panel_attributes>
@@ -48,10 +48,10 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>312</x>
-      <y>488</y>
-      <w>544</w>
-      <h>168</h>
+      <x>234</x>
+      <y>396</y>
+      <w>408</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Gestor
 --
@@ -59,36 +59,38 @@ m2=* usuarios</panel_attributes>
 - contraseña: String
 --
 + cambiarContraseña(String pwd): Boolean
-+ cambiarPermisos(Empleado e, TipoPermiso[1..3] p): Boolean
++ asignarPermiso(Empleado e, TipoPermiso p): Boolean
++ revocarPermiso(Empleado e, TipoPermiso p): Boolean
 + addEmpleado(String usuario, String pwd, TipoPermiso[1..3] p): Boolean
 + verActividadUsuarios(LocalDate desde): ClienteRegistrado[*]
 + cambiarCaducidadCarrito(): Boolean
 + cambiarCaducidadIntercambio(): Boolean
 + addProducto(String nombre, String descripcion, double precio, ImageIcon foto, int nStock): Boolean
-+ eliminarProducto(Producto p): Boolean</panel_attributes>
++ eliminarProducto(Producto p): Boolean
++ setContraseña(Empleado e, String pwd): Boolean
++ crearDescuento(Descuento d, ProductoVenta p): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
-      <y>488</y>
+      <x>678</x>
+      <y>384</y>
       <w>168</w>
-      <h>56</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Empleado
---
---
+-
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>488</y>
-      <w>168</w>
-      <h>56</h>
+      <x>900</x>
+      <y>426</y>
+      <w>126</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>ClienteRegistrado
 --
@@ -99,10 +101,10 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
-      <y>64</y>
-      <w>168</w>
-      <h>104</h>
+      <x>690</x>
+      <y>108</y>
+      <w>210</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>ClienteNoRegistrado
 --
@@ -110,16 +112,16 @@ m2=* usuarios</panel_attributes>
 - dni : String
 - pasaporte : String
 --
-</panel_attributes>
++ iniciarSesion(String usuario, String pwd): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
-      <y>624</y>
-      <w>168</w>
-      <h>88</h>
+      <x>696</x>
+      <y>528</y>
+      <w>126</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 TipoPermiso
@@ -134,22 +136,22 @@ TipoPermiso
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1016</x>
-      <y>536</y>
-      <w>96</w>
-      <h>104</h>
+      <x>756</x>
+      <y>462</y>
+      <w>72</w>
+      <h>78</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
 1..3 permisos</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
-      <y>208</y>
-      <w>168</w>
-      <h>112</h>
+      <x>528</x>
+      <y>216</y>
+      <w>126</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>ServicioBusqueda
 --
@@ -161,10 +163,10 @@ TipoPermiso
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>312</y>
-      <w>136</w>
-      <h>48</h>
+      <x>612</x>
+      <y>294</y>
+      <w>102</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=busqueda</panel_attributes>
@@ -173,22 +175,22 @@ m1=busqueda</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>136</y>
-      <w>136</w>
-      <h>88</h>
+      <x>612</x>
+      <y>162</y>
+      <w>90</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=busqueda</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>112</y>
-      <w>168</w>
-      <h>88</h>
+      <x>324</x>
+      <y>144</y>
+      <w>126</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 TipoFiltro
@@ -203,10 +205,10 @@ TipoFiltro
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
+      <x>324</x>
       <y>240</y>
-      <w>168</w>
-      <h>88</h>
+      <w>126</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 TipoOrden
@@ -221,10 +223,10 @@ TipoOrden
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>344</y>
-      <w>168</w>
-      <h>88</h>
+      <x>324</x>
+      <y>318</y>
+      <w>126</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 TipoDireccion
@@ -238,10 +240,10 @@ TipoDireccion
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
-      <y>152</y>
-      <w>128</w>
-      <h>144</h>
+      <x>444</x>
+      <y>174</y>
+      <w>96</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=filtro</panel_attributes>
@@ -250,10 +252,10 @@ m1=filtro</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
-      <y>272</y>
-      <w>128</w>
-      <h>32</h>
+      <x>444</x>
+      <y>264</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=orden</panel_attributes>
@@ -262,10 +264,10 @@ m1=orden</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
-      <y>272</y>
-      <w>128</w>
-      <h>144</h>
+      <x>444</x>
+      <y>264</y>
+      <w>96</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=direccion</panel_attributes>
@@ -274,10 +276,10 @@ m1=direccion</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>216</y>
-      <w>504</w>
-      <h>112</h>
+      <x>648</x>
+      <y>222</y>
+      <w>378</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=busqueda</panel_attributes>
@@ -286,22 +288,22 @@ m2=busqueda</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1096</x>
-      <y>128</y>
-      <w>280</w>
-      <h>192</h>
+      <x>894</x>
+      <y>156</y>
+      <w>138</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=* clientes</panel_attributes>
-    <additional_attributes>330.0;220.0;330.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>210.0;220.0;210.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1352</x>
-      <y>304</y>
-      <w>176</w>
-      <h>48</h>
+      <x>1014</x>
+      <y>288</y>
+      <w>132</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Tienda
 --
@@ -312,32 +314,32 @@ m2=* clientes</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>848</x>
-      <y>512</y>
-      <w>104</w>
-      <h>24</h>
+      <x>636</x>
+      <y>444</y>
+      <w>54</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>648</y>
-      <w>256</w>
-      <h>40</h>
+      <x>522</x>
+      <y>540</y>
+      <w>186</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>300.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>290.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1112</x>
-      <y>728</y>
-      <w>400</w>
-      <h>96</h>
+      <x>834</x>
+      <y>606</y>
+      <w>300</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Historial
 -
@@ -347,10 +349,10 @@ m2=* clientes</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1208</x>
-      <y>536</y>
-      <w>24</w>
-      <h>208</h>
+      <x>954</x>
+      <y>462</y>
+      <w>18</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
@@ -358,25 +360,39 @@ m2=* clientes</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>552</x>
-      <y>648</y>
-      <w>576</w>
-      <h>144</h>
+      <x>414</x>
+      <y>540</y>
+      <w>432</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>700.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>700.0;170.0;10.0;170.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
       <x>0</x>
-      <y>488</y>
-      <w>312</w>
-      <h>56</h>
+      <y>426</y>
+      <w>234</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>No hace falta poner idd en addProducto ya que se pone 
 en funcion de cuantos productos haya dados de alta
 bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1182</x>
+      <y>366</y>
+      <w>234</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+La clase Empleado pertenece a este paquete pero se
+desarrolla en DiagramaEmpleados para no cargar
+demasiado este diagrama</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>544</x>
+      <x>624</x>
       <y>128</y>
       <w>352</w>
       <h>184</h>
@@ -12,14 +12,15 @@
     <panel_attributes>ProductoVenta
 -
 - ratingMedio: double
+-
 + ventaProducto(ClienteRegistrado c): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>504</x>
-      <y>496</y>
+      <x>584</x>
+      <y>384</y>
       <w>168</w>
       <h>152</h>
     </coordinates>
@@ -32,7 +33,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
+      <x>488</x>
       <y>216</y>
       <w>152</w>
       <h>32</h>
@@ -44,7 +45,7 @@ m2=* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>320</x>
       <y>192</y>
       <w>176</w>
       <h>128</h>
@@ -57,7 +58,7 @@ m2=* productos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>888</x>
+      <x>968</x>
       <y>160</y>
       <w>112</w>
       <h>480</h>
@@ -68,7 +69,7 @@ m2=* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
+      <x>1064</x>
       <y>120</y>
       <w>168</w>
       <h>104</h>
@@ -86,44 +87,45 @@ m2=* productos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
+      <x>720</x>
       <y>304</y>
       <w>72</w>
-      <h>208</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=producto</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>664</x>
-      <y>544</y>
-      <w>104</w>
-      <h>32</h>
+      <x>744</x>
+      <y>432</y>
+      <w>136</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=* ratings </panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>752</x>
+      <x>832</x>
       <y>488</y>
       <w>168</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>Pedido
 --
-</panel_attributes>
+- listo: Boolean
+- recogido: Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
+      <x>912</x>
       <y>304</y>
       <w>96</w>
       <h>200</h>
@@ -135,7 +137,7 @@ r1=1..* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
+      <x>1064</x>
       <y>576</y>
       <w>168</w>
       <h>104</h>
@@ -151,7 +153,7 @@ r1=1..* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
+      <x>1064</x>
       <y>352</y>
       <w>168</w>
       <h>104</h>
@@ -167,7 +169,7 @@ r1=1..* productos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1144</x>
+      <x>1224</x>
       <y>392</y>
       <w>144</w>
       <h>32</h>
@@ -179,7 +181,7 @@ tipoDeJuego</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1272</x>
+      <x>1352</x>
       <y>384</y>
       <w>168</w>
       <h>152</h>
@@ -198,7 +200,7 @@ TipoDeJuego
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1144</x>
+      <x>1224</x>
       <y>600</y>
       <w>152</w>
       <h>32</h>
@@ -210,7 +212,7 @@ m1=tipoDeCategoria</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1280</x>
+      <x>1360</x>
       <y>560</y>
       <w>168</w>
       <h>152</h>
@@ -229,7 +231,7 @@ CategoriaJerarquica
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1400</x>
+      <x>1480</x>
       <y>632</y>
       <w>200</w>
       <h>152</h>
@@ -242,7 +244,7 @@ m2=* subcategorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1136</x>
+      <x>1216</x>
       <y>672</y>
       <w>152</w>
       <h>240</h>
@@ -254,7 +256,7 @@ m1=dimension</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1272</x>
+      <x>1352</x>
       <y>848</y>
       <w>168</w>
       <h>104</h>
@@ -271,7 +273,7 @@ m1=dimension</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>752</x>
+      <x>832</x>
       <y>760</y>
       <w>168</w>
       <h>152</h>
@@ -290,7 +292,7 @@ EstadoPedido
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>824</x>
+      <x>904</x>
       <y>632</y>
       <w>56</w>
       <h>144</h>
@@ -298,5 +300,52 @@ EstadoPedido
     <panel_attributes>lt=&lt;-
 m1=estado</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>240</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ClienteRegistrado
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>256</y>
+      <w>176</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=carrito</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>576</y>
+      <w>224</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Empleado
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>688</x>
+      <y>592</y>
+      <w>160</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
