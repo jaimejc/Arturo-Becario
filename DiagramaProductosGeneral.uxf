@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>791</x>
+      <y>49</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Tienda
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>84</y>
+      <w>77</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=* productos</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>350</y>
+      <w>224</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>/Producto/
+--
+- nombre : String
+- descripcion : String
+- idUnico : String
+- precio : double
+- foto : ImageIcon
+- nStock : int
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>959</x>
+      <y>364</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>959</x>
+      <y>469</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>525</y>
+      <w>49</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+estado</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>588</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoProducto
+--
++ PERFECTO
++ MUY_BUENO
++ USO_LIGERO
++ USO_EVIDENTE
++ MUY_USADO
++ DAÑADO
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>616</y>
+      <w>357</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=* productos</panel_attributes>
+    <additional_attributes>10.0;160.0;410.0;160.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>721</y>
+      <w>154</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Carrito
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>462</y>
+      <w>308</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>ProductoVenta
+-
+- ratingMedio: double
++ ventaProducto(ClienteRegistrado c): Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>245</y>
+      <w>308</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>ProductoIntercambio
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>441</y>
+      <w>539</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=productoRegalo</panel_attributes>
+    <additional_attributes>750.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>504</y>
+      <w>168</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>511</y>
+      <w>182</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*productos
+m2=descuento</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>434</x>
+      <y>469</y>
+      <w>147</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>/Descuento/
+--
+- fechaInicio : LocalTime
+- fechaFin : LocalTime
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>455</y>
+      <w>231</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>310.0;110.0;140.0;110.0;140.0;10.0;10.0;10.0;140.0;10.0;140.0;230.0;10.0;230.0;140.0;230.0;140.0;360.0;10.0;360.0;140.0;360.0;140.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>427</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Regalo
+--
+- importeMinimo : double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>504</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>ImporteCarrito
+--
+- importeMinimo : double
+- cantidadReducida : int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>595</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Rebaja
+--
+- porcentaje : double
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>679</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>MasXMenos
+--
+- numProducto : int
+- numAPagar : int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>574</y>
+      <w>133</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m1=descuentoCarrito
+m2=* carritos</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0;170.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>805</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=carritoCliente</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>791</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>ClienteRegistrado
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>217</x>
+      <y>840</y>
+      <w>245</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Clase desarrollada en DiagramaGrande tambien</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>693</x>
+      <y>0</y>
+      <w>245</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Clase desarrollada en DiagramaGrande tambien</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>651</x>
+      <y>826</y>
+      <w>98</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=tiempoCaducidad</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>931</y>
+      <w>154</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>tCaducidad
+--
+- dias: int
+- horas: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>861</x>
+      <y>896</y>
+      <w>476</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Gestor
+-
+- usuario: String
+- contraseña: String
+--
++ cambiarCaducidadCarrito(): Boolean
++ cambiarCaducidadIntercambio(): Boolean
++ addProducto(String nombre, String descripcion, double precio, ImageIcon foto, int nStock): Boolean
++ eliminarProducto(Producto p): Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>980</y>
+      <w>147</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=tCaducidadCarrito</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>525</y>
+      <w>21</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;530.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>868</x>
+      <y>1008</y>
+      <w>273</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>No hace falta poner idd en addProducto ya que se pone 
+en funcion de cuantos productos haya dados de alta
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

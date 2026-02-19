@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>288</y>
+      <x>592</x>
+      <y>248</y>
       <w>168</w>
       <h>128</h>
     </coordinates>
@@ -25,30 +25,19 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>408</y>
-      <w>24</w>
-      <h>112</h>
+      <x>360</x>
+      <y>368</y>
+      <w>528</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>400.0;10.0;400.0;70.0;640.0;70.0;640.0;160.0;640.0;70.0;10.0;70.0;10.0;160.0;10.0;70.0;400.0;70.0;400.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>512</x>
-      <y>456</y>
-      <w>368</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;60.0;10.0;20.0;440.0;20.0;440.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>776</x>
-      <y>368</y>
+      <x>752</x>
+      <y>328</y>
       <w>272</w>
       <h>32</h>
     </coordinates>
@@ -59,24 +48,27 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>504</y>
-      <w>240</w>
-      <h>96</h>
+      <x>88</x>
+      <y>496</y>
+      <w>400</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Gestor
 --
 - usuario: String
 - contraseña: String
 --
-+ cambiarContraseña(String pwd): Boolean</panel_attributes>
++ cambiarContraseña(String pwd): Boolean
++ cambiarPermisos(Empleado e, TipoPermiso[1..3] p): Boolean
++ addEmpleado(String usuario, String pwd, TipoPermiso[1..3] p): Boolean
++ verActividadUsuarios(LocalDate desde): ClienteRegistrado[*]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>504</y>
+      <x>592</x>
+      <y>496</y>
       <w>168</w>
       <h>56</h>
     </coordinates>
@@ -89,8 +81,8 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>504</y>
+      <x>776</x>
+      <y>496</y>
       <w>168</w>
       <h>56</h>
     </coordinates>
@@ -103,8 +95,8 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>112</y>
+      <x>592</x>
+      <y>72</y>
       <w>168</w>
       <h>104</h>
     </coordinates>
@@ -120,8 +112,8 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>600</y>
+      <x>592</x>
+      <y>632</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -138,20 +130,20 @@ TipoPermiso
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>552</y>
+      <x>672</x>
+      <y>544</y>
       <w>96</w>
-      <h>64</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1..3 permisos</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>256</y>
+      <x>360</x>
+      <y>216</y>
       <w>168</w>
       <h>112</h>
     </coordinates>
@@ -165,8 +157,8 @@ TipoPermiso
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>360</y>
+      <x>472</x>
+      <y>320</y>
       <w>136</w>
       <h>48</h>
     </coordinates>
@@ -177,8 +169,8 @@ m1=busqueda</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>184</y>
+      <x>472</x>
+      <y>144</y>
       <w>136</w>
       <h>88</h>
     </coordinates>
@@ -189,8 +181,8 @@ m1=busqueda</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
-      <y>160</y>
+      <x>88</x>
+      <y>120</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -207,8 +199,8 @@ TipoFiltro
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
-      <y>288</y>
+      <x>88</x>
+      <y>248</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -225,8 +217,8 @@ TipoOrden
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
-      <y>416</y>
+      <x>88</x>
+      <y>352</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -242,8 +234,8 @@ TipoDireccion
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>272</x>
-      <y>200</y>
+      <x>248</x>
+      <y>160</y>
       <w>128</w>
       <h>144</h>
     </coordinates>
@@ -254,8 +246,8 @@ m1=filtro</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>272</x>
-      <y>320</y>
+      <x>248</x>
+      <y>280</y>
       <w>128</w>
       <h>32</h>
     </coordinates>
@@ -266,20 +258,20 @@ m1=orden</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>272</x>
-      <y>320</y>
+      <x>248</x>
+      <y>280</y>
       <w>128</w>
-      <h>168</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=direccion</panel_attributes>
-    <additional_attributes>10.0;180.0;90.0;180.0;90.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;90.0;150.0;90.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>264</y>
+      <x>520</x>
+      <y>224</y>
       <w>504</w>
       <h>112</h>
     </coordinates>
@@ -290,8 +282,8 @@ m2=busqueda</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>776</x>
-      <y>176</y>
+      <x>752</x>
+      <y>136</y>
       <w>280</w>
       <h>192</h>
     </coordinates>
@@ -302,8 +294,8 @@ m2=* clientes</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1032</x>
-      <y>352</y>
+      <x>1008</x>
+      <y>312</y>
       <w>176</w>
       <h>48</h>
     </coordinates>
@@ -312,5 +304,62 @@ m2=* clientes</panel_attributes>
 --
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>520</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>600</y>
+      <w>256</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>300.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>736</y>
+      <w>400</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Historial
+-
++ getListaUsuariosActividad(LocalDate desde): ClienteRegistrado[*]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>544</y>
+      <w>24</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>600</y>
+      <w>576</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>700.0;230.0;10.0;230.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
