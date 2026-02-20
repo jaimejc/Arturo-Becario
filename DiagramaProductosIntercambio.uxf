@@ -401,4 +401,30 @@ m2=cartera</panel_attributes>
 m2=* productos</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>371</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Estado
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>462</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=estado</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;60.0</additional_attributes>
+  </element>
 </diagram>
