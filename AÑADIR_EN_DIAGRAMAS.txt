@@ -1,3 +1,14 @@
 ClienteRegistrado
     + pedirTasacion(ProductoIntercambio p): DateTime
-    - dni: String
+    + comprarCarrito(): Boolean
+    + eliminarCarrito(): Boolean
+    + eliminarElementoDeCarrito(ProductoVenta p): Boolean
+
+DiagramaProductosGeneral
+    Clase Historico
+
+Empleados
+    + crearPack(ProductoVenta[*] p): Pack
+
+Gestor: 
+    + crearPack(ProductoVenta[*] p): Pack
