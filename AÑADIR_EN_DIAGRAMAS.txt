@@ -1,1 +1,3 @@
-+ pedirTasacion(ProductoIntercambio p): DateTime
+ClienteRegistrado
+    + pedirTasacion(ProductoIntercambio p): DateTime
+    - dni: String
