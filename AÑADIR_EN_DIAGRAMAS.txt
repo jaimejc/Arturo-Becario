@@ -14,3 +14,6 @@ Empleados
 Gestor: 
     + crearPack(ProductoVenta[*] p): Pack
     + tasarProducto(p: ProductoIntercambio, estado: EstadoFisico, precio: double): void
+
+Producto:
+    Eliminar Precio
