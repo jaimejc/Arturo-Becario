@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>936</x>
-      <y>176</y>
+      <y>280</y>
       <w>168</w>
       <h>128</h>
     </coordinates>
@@ -26,7 +26,7 @@
     <id>Relation</id>
     <coordinates>
       <x>704</x>
-      <y>296</y>
+      <y>400</y>
       <w>592</w>
       <h>144</h>
     </coordinates>
@@ -37,7 +37,7 @@
     <id>Relation</id>
     <coordinates>
       <x>1096</x>
-      <y>256</y>
+      <y>360</y>
       <w>272</w>
       <h>32</h>
     </coordinates>
@@ -49,7 +49,7 @@ m2=* usuarios</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>312</x>
-      <y>384</y>
+      <y>488</y>
       <w>544</w>
       <h>256</h>
     </coordinates>
@@ -78,7 +78,7 @@ m2=* usuarios</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>904</x>
-      <y>368</y>
+      <y>472</y>
       <w>224</w>
       <h>112</h>
     </coordinates>
@@ -91,7 +91,7 @@ m2=* usuarios</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1200</x>
-      <y>424</y>
+      <y>528</y>
       <w>168</w>
       <h>56</h>
     </coordinates>
@@ -105,7 +105,7 @@ m2=* usuarios</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>920</x>
-      <y>0</y>
+      <y>104</y>
       <w>280</w>
       <h>104</h>
     </coordinates>
@@ -122,7 +122,7 @@ m2=* usuarios</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>928</x>
-      <y>560</y>
+      <y>664</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -140,7 +140,7 @@ TipoPermiso
     <id>Relation</id>
     <coordinates>
       <x>1008</x>
-      <y>472</y>
+      <y>576</y>
       <w>96</w>
       <h>104</h>
     </coordinates>
@@ -152,7 +152,7 @@ TipoPermiso
     <id>UMLClass</id>
     <coordinates>
       <x>704</x>
-      <y>144</y>
+      <y>248</y>
       <w>168</w>
       <h>112</h>
     </coordinates>
@@ -167,7 +167,7 @@ TipoPermiso
     <id>Relation</id>
     <coordinates>
       <x>816</x>
-      <y>248</y>
+      <y>352</y>
       <w>136</w>
       <h>48</h>
     </coordinates>
@@ -179,7 +179,7 @@ m1=busqueda</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>816</x>
-      <y>72</y>
+      <y>176</y>
       <w>120</w>
       <h>88</h>
     </coordinates>
@@ -191,7 +191,7 @@ m1=busqueda</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>432</x>
-      <y>48</y>
+      <y>152</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -209,7 +209,7 @@ TipoFiltro
     <id>UMLClass</id>
     <coordinates>
       <x>432</x>
-      <y>176</y>
+      <y>280</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -227,7 +227,7 @@ TipoOrden
     <id>UMLClass</id>
     <coordinates>
       <x>432</x>
-      <y>280</y>
+      <y>384</y>
       <w>168</w>
       <h>88</h>
     </coordinates>
@@ -244,7 +244,7 @@ TipoDireccion
     <id>Relation</id>
     <coordinates>
       <x>592</x>
-      <y>88</y>
+      <y>192</y>
       <w>128</w>
       <h>144</h>
     </coordinates>
@@ -256,7 +256,7 @@ m1=filtro</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>592</x>
-      <y>208</y>
+      <y>312</y>
       <w>128</w>
       <h>32</h>
     </coordinates>
@@ -268,7 +268,7 @@ m1=orden</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>592</x>
-      <y>208</y>
+      <y>312</y>
       <w>128</w>
       <h>144</h>
     </coordinates>
@@ -280,7 +280,7 @@ m1=direccion</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>864</x>
-      <y>152</y>
+      <y>256</y>
       <w>504</w>
       <h>112</h>
     </coordinates>
@@ -292,7 +292,7 @@ m2=busqueda</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1192</x>
-      <y>64</y>
+      <y>168</y>
       <w>184</w>
       <h>192</h>
     </coordinates>
@@ -304,21 +304,22 @@ m2=* clientes</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1352</x>
-      <y>240</y>
+      <y>344</y>
       <w>552</w>
       <h>64</h>
     </coordinates>
     <panel_attributes>Tienda
 --
 + addProducto(String nombre, String descripcion, double precio, ImageIcon foto, int nStock): Boolean
-+ eliminarProducto(Producto p): Boolean</panel_attributes>
++ eliminarProducto(Producto p): Boolean
++ addProducto(String nombre, String descripcion, double precio, ImageIcon foto, int nStock): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>848</x>
-      <y>448</y>
+      <y>552</y>
       <w>72</w>
       <h>24</h>
     </coordinates>
@@ -329,7 +330,7 @@ m2=* clientes</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>848</x>
-      <y>624</y>
+      <y>728</y>
       <w>96</w>
       <h>24</h>
     </coordinates>
@@ -340,7 +341,7 @@ m2=* clientes</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1112</x>
-      <y>664</y>
+      <y>768</y>
       <w>400</w>
       <h>96</h>
     </coordinates>
@@ -355,7 +356,7 @@ m2=* clientes</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1272</x>
-      <y>472</y>
+      <y>576</y>
       <w>24</w>
       <h>208</h>
     </coordinates>
@@ -366,7 +367,7 @@ m2=* clientes</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>552</x>
-      <y>632</y>
+      <y>736</y>
       <w>576</w>
       <h>96</h>
     </coordinates>
@@ -377,7 +378,7 @@ m2=* clientes</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>0</x>
-      <y>424</y>
+      <y>528</y>
       <w>312</w>
       <h>56</h>
     </coordinates>
@@ -390,7 +391,7 @@ bg=yellow</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>1576</x>
-      <y>344</y>
+      <y>448</y>
       <w>312</w>
       <h>120</h>
     </coordinates>
@@ -404,7 +405,7 @@ demasiado este diagrama</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>368</x>
-      <y>296</y>
+      <y>400</y>
       <w>1200</w>
       <h>520</h>
     </coordinates>
