@@ -42,8 +42,7 @@ m2=* productos</panel_attributes>
 - idUnico : String
 - precio : double
 - foto : ImageIcon
-- nStock : int
---</panel_attributes>
+- nStock : int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -67,38 +66,6 @@ m2=* productos</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>623</x>
-      <y>546</y>
-      <w>49</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-estado</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>553</x>
-      <y>609</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enum&gt;&gt;
-EstadoProducto
---
-+ PERFECTO
-+ MUY_BUENO
-+ USO_LIGERO
-+ USO_EVIDENTE
-+ MUY_USADO
-+ DAÑADO
-</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
