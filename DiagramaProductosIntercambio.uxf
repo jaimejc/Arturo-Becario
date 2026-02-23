@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>300</y>
+      <x>985</x>
+      <y>270</y>
       <w>90</w>
       <h>45</h>
     </coordinates>
@@ -16,9 +16,9 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1145</x>
-      <y>210</y>
-      <w>90</w>
+      <x>1050</x>
+      <y>180</y>
+      <w>85</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -28,8 +28,8 @@ m1=tCaducidadIntercambio</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>495</x>
-      <y>455</y>
+      <x>400</x>
+      <y>425</y>
       <w>220</w>
       <h>115</h>
     </coordinates>
@@ -42,8 +42,8 @@ m1=tCaducidadIntercambio</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>410</y>
+      <x>615</x>
+      <y>380</y>
       <w>80</w>
       <h>205</h>
     </coordinates>
@@ -53,8 +53,8 @@ m1=tCaducidadIntercambio</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>390</y>
+      <x>685</x>
+      <y>360</y>
       <w>105</w>
       <h>65</h>
     </coordinates>
@@ -71,8 +71,8 @@ m1=tCaducidadIntercambio</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>575</y>
+      <x>685</x>
+      <y>545</y>
       <w>105</w>
       <h>65</h>
     </coordinates>
@@ -87,8 +87,8 @@ m1=tCaducidadIntercambio</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>475</y>
+      <x>685</x>
+      <y>445</y>
       <w>105</w>
       <h>65</h>
     </coordinates>
@@ -103,8 +103,8 @@ m1=tCaducidadIntercambio</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>505</y>
+      <x>785</x>
+      <y>475</y>
       <w>90</w>
       <h>20</h>
     </coordinates>
@@ -115,8 +115,8 @@ m1=tipoDeJuego</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
-      <y>455</y>
+      <x>865</x>
+      <y>425</y>
       <w>105</w>
       <h>95</h>
     </coordinates>
@@ -134,8 +134,8 @@ TipoDeJuego
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
-      <y>715</y>
+      <x>715</x>
+      <y>685</y>
       <w>105</w>
       <h>95</h>
     </coordinates>
@@ -152,8 +152,8 @@ CategoriaJerarquica
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>885</x>
-      <y>760</y>
+      <x>790</x>
+      <y>730</y>
       <w>125</w>
       <h>95</h>
     </coordinates>
@@ -165,8 +165,8 @@ m2=* subcategorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>590</y>
+      <x>785</x>
+      <y>560</y>
       <w>90</w>
       <h>20</h>
     </coordinates>
@@ -177,8 +177,8 @@ m1=dimension</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
-      <y>570</y>
+      <x>865</x>
+      <y>540</y>
       <w>105</w>
       <h>65</h>
     </coordinates>
@@ -194,8 +194,8 @@ m1=dimension</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>155</y>
+      <x>465</x>
+      <y>125</y>
       <w>220</w>
       <h>115</h>
     </coordinates>
@@ -212,8 +212,8 @@ _- horasCaducidad: int_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>495</x>
-      <y>315</y>
+      <x>400</x>
+      <y>285</y>
       <w>105</w>
       <h>55</h>
     </coordinates>
@@ -225,9 +225,9 @@ _- horasCaducidad: int_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>375</y>
-      <w>45</w>
+      <x>475</x>
+      <y>345</y>
+      <w>40</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -237,9 +237,9 @@ m1=* ofertas</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>265</y>
-      <w>45</w>
+      <x>535</x>
+      <y>235</y>
+      <w>40</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
@@ -249,8 +249,8 @@ m2=producto</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1115</x>
-      <y>180</y>
+      <x>1020</x>
+      <y>150</y>
       <w>75</w>
       <h>35</h>
     </coordinates>
@@ -263,8 +263,8 @@ m2=producto</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>775</x>
-      <y>190</y>
+      <x>680</x>
+      <y>160</y>
       <w>350</w>
       <h>20</h>
     </coordinates>
@@ -275,9 +275,9 @@ m1=seCancelaTras</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>365</y>
-      <w>60</w>
+      <x>475</x>
+      <y>335</y>
+      <w>55</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
@@ -287,9 +287,9 @@ m2=1..*productos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>265</y>
-      <w>35</w>
+      <x>485</x>
+      <y>235</y>
+      <w>30</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
@@ -299,8 +299,8 @@ m2=oferta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>610</y>
+      <x>135</x>
+      <y>580</y>
       <w>95</w>
       <h>35</h>
     </coordinates>
@@ -312,8 +312,8 @@ m2=oferta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>620</y>
+      <x>225</x>
+      <y>590</y>
       <w>95</w>
       <h>20</h>
     </coordinates>
@@ -324,8 +324,8 @@ m2=cartera</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>405</x>
-      <y>610</y>
+      <x>310</x>
+      <y>580</y>
       <w>105</w>
       <h>35</h>
     </coordinates>
@@ -337,9 +337,9 @@ m2=cartera</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>565</y>
-      <w>55</w>
+      <x>400</x>
+      <y>535</y>
+      <w>50</w>
       <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
@@ -349,8 +349,8 @@ m2=* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>365</y>
+      <x>825</x>
+      <y>335</y>
       <w>105</w>
       <h>85</h>
     </coordinates>
@@ -368,8 +368,8 @@ Estado
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>955</x>
-      <y>320</y>
+      <x>860</x>
+      <y>290</y>
       <w>35</w>
       <h>55</h>
     </coordinates>
@@ -380,8 +380,8 @@ m1=estado</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>305</x>
-      <y>550</y>
+      <x>210</x>
+      <y>520</y>
       <w>200</w>
       <h>70</h>
     </coordinates>
@@ -391,8 +391,8 @@ m1=estado</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>500</x>
-      <y>365</y>
+      <x>405</x>
+      <y>335</y>
       <w>65</w>
       <h>100</h>
     </coordinates>
@@ -403,8 +403,8 @@ m1=ofertaRealizada</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>325</x>
-      <y>180</y>
+      <x>230</x>
+      <y>150</y>
       <w>115</w>
       <h>50</h>
     </coordinates>
@@ -416,8 +416,8 @@ m1=ofertaRealizada</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>435</x>
-      <y>200</y>
+      <x>340</x>
+      <y>170</y>
       <w>135</w>
       <h>20</h>
     </coordinates>
@@ -428,8 +428,8 @@ m2=* intercambios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>515</x>
-      <y>645</y>
+      <x>420</x>
+      <y>615</y>
       <w>220</w>
       <h>115</h>
     </coordinates>
@@ -441,9 +441,9 @@ m2=* intercambios</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>635</x>
-      <y>565</y>
-      <w>55</w>
+      <x>540</x>
+      <y>535</y>
+      <w>50</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
@@ -453,8 +453,8 @@ m2=* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>875</x>
-      <y>280</y>
+      <x>780</x>
+      <y>250</y>
       <w>110</w>
       <h>45</h>
     </coordinates>
@@ -467,8 +467,8 @@ _- precioPorTasacion: double_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>980</x>
-      <y>300</y>
+      <x>885</x>
+      <y>270</y>
       <w>110</w>
       <h>20</h>
     </coordinates>
@@ -479,8 +479,8 @@ r1=tasacion</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>290</y>
+      <x>585</x>
+      <y>260</y>
       <w>205</w>
       <h>175</h>
     </coordinates>
@@ -491,8 +491,8 @@ r1=tasacion</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>775</x>
-      <y>235</y>
+      <x>680</x>
+      <y>205</y>
       <w>345</w>
       <h>75</h>
     </coordinates>
@@ -502,8 +502,8 @@ r1=tasacion</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>95</x>
-      <y>680</y>
+      <x>0</x>
+      <y>650</y>
       <w>335</w>
       <h>115</h>
     </coordinates>
@@ -521,8 +521,8 @@ _- margenValor: double_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>425</x>
-      <y>715</y>
+      <x>330</x>
+      <y>685</y>
       <w>100</w>
       <h>20</h>
     </coordinates>
@@ -533,8 +533,8 @@ m1=recomendador</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>545</y>
+      <x>615</x>
+      <y>515</y>
       <w>110</w>
       <h>215</h>
     </coordinates>
@@ -545,8 +545,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>415</x>
-      <y>640</y>
+      <x>320</x>
+      <y>610</y>
       <w>15</w>
       <h>50</h>
     </coordinates>
@@ -556,8 +556,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>640</y>
+      <x>175</x>
+      <y>610</y>
       <w>15</w>
       <h>50</h>
     </coordinates>
@@ -567,8 +567,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>505</y>
+      <x>85</x>
+      <y>475</y>
       <w>325</w>
       <h>185</h>
     </coordinates>
@@ -578,8 +578,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>365</x>
-      <y>340</y>
+      <x>270</x>
+      <y>310</y>
       <w>795</w>
       <h>555</h>
     </coordinates>
@@ -589,8 +589,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
-      <y>30</y>
+      <x>445</x>
+      <y>0</y>
       <w>90</w>
       <h>45</h>
     </coordinates>
@@ -601,8 +601,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>70</y>
+      <x>485</x>
+      <y>40</y>
       <w>15</w>
       <h>95</h>
     </coordinates>
@@ -612,8 +612,8 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>275</x>
-      <y>50</y>
+      <x>180</x>
+      <y>20</y>
       <w>275</w>
       <h>295</h>
     </coordinates>
@@ -623,12 +623,37 @@ m1=categorias</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>275</x>
-      <y>330</y>
+      <x>180</x>
+      <y>300</y>
       <w>230</w>
       <h>155</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>440.0;290.0;10.0;290.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>585</x>
+      <y>0</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>SistemaNotificacion
+-
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>40</y>
+      <w>15</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
