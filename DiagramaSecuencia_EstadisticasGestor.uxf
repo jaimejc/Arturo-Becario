@@ -372,18 +372,6 @@ Rating[*]</panel_attributes>
     <additional_attributes>10.0;20.0;720.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>414</x>
-      <y>720</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-est (estadísticas)</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLFrame</id>
     <coordinates>
       <x>324</x>
