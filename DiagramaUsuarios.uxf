@@ -135,12 +135,12 @@ m2=* usuarios</panel_attributes>
       <x>1526</x>
       <y>539</y>
       <w>343</w>
-      <h>182</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>ClienteRegistrado
 --
 --
-+ pedirTasacion(ProductoIntercambio p): DateTime
++ solicitar	Tasacion(ProductoIntercambio p): DateTime
 + pagarTasa(Tasacion t) : Boolean
 + comprarCarrito(): Pedido
 + vaciarCarrito(): Boolean
@@ -152,7 +152,8 @@ m2=* usuarios</panel_attributes>
 + valorarProducto(ProductoVenta p, int rating, String comentario) : void
 + verCarrito() : Carrito
 + getNotificacionesCliente(ClienteRegistrado c) : List&lt;Notificacion&gt;
-+ aceptarOferta(Intercambio i, Oferta o): Boolean</panel_attributes>
++ aceptarOferta(Intercambio i, Oferta o): Boolean
++ añadirObjetoACartera(ProductoIntercambio p): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -396,12 +397,12 @@ r1={distintos}</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1610</x>
-      <y>714</y>
+      <y>742</y>
       <w>21</w>
-      <h>252</h>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;340.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
