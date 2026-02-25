@@ -109,11 +109,11 @@ m2=* usuarios</panel_attributes>
 + tasarProducto(p: ProductoIntercambio, estado: EstadoFisico, precio: double): void
 + modificarStock(ProductoVenta p): Boolean
 + tienePermiso(TipoPermiso p) : boolean
-+ getNotificacionesEmpleado(Empleado e) : List&lt;Notificacion&gt;
 + verListaPedidos(): Pedido[*]
 + consultarValoraciones(ProductoVenta p): Rating[*]
 + verOfertasIntercambio(Intercambio I): Oferta[*]
 + verInfoOferta(Oferta o): Oferta
++ eliminarOfertaIntercambio(Intercambio i, Oferta o): Boolean
 + verInfoProductos():  ProductoVenta[*]
 + setTasacion(ProductoIntercambio o, Tasacion t): Boolean
 + verObjetosPorTasar(): ObjetoIntercambio[*]
@@ -125,17 +125,16 @@ m2=* usuarios</panel_attributes>
 + addCategoria(String nombre, CategoriaJerarquica padre): Boolean
 + consultarValoraciones(ProductoVenta p): Rating[*]
 + verListaPedidos(): Pedido[*]
-+ crearDescuento(Descuento d, ProductoVenta p): Boolean
-+ eliminarDescuentos(ProductoVenta p): Boolean</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1526</x>
+      <x>1512</x>
       <y>539</y>
-      <w>343</w>
-      <h>231</h>
+      <w>518</w>
+      <h>336</h>
     </coordinates>
     <panel_attributes>ClienteRegistrado
 --
@@ -150,12 +149,17 @@ m2=* usuarios</panel_attributes>
 + solicitarIntercambio(ProductoIntercambio p) : Intercambio
 + proponerOferta(Oferta o) : void
 + valorarProducto(ProductoVenta p, int rating, String comentario) : void
-+ verCarrito() : Carrito
-+ getNotificacionesCliente(ClienteRegistrado c) : List&lt;Notificacion&gt;
++ verCarrito(): Carrito
 + aceptarOferta(Intercambio i, Oferta o): Boolean
 + añadirObjetoACartera(ProductoIntercambio p): Boolean
 + ordenarCatalogoPorFiltro(TipoFiltro tf, TipoOrden to, TipoDireccion td): Boolean
-+ ordenarCatalogoPorTexto(String texto): Boolean</panel_attributes>
++ ordenarCatalogoPorTexto(String texto): Boolean
++ iniciarIntercambio(ProductoIntercambio p, int dias, int horas, CategoriaJerarquica c, String sePide): Boolean
++ verOfertasIntercambio(Intercambio i): Oferta[*]
++ aceptarOferta(Intercambio i, Oferta o): DateTime
++ rechazarOferta(Intercambio I, Oferta o): Boolean
++ eliminarOfertaHecha(Oferta o): Boolean
++ realizarOferta(Intercambio i, ProductoIntercambio[*] p): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -279,12 +283,12 @@ r1={distintos}</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1610</x>
-      <y>763</y>
+      <y>868</y>
       <w>21</w>
-      <h>203</h>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -370,12 +374,12 @@ m1=historial</panel_attributes>
     <coordinates>
       <x>1750</x>
       <y>448</y>
-      <w>147</w>
+      <w>364</w>
       <h>567</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=historial</panel_attributes>
-    <additional_attributes>120.0;10.0;190.0;10.0;190.0;780.0;10.0;780.0</additional_attributes>
+    <additional_attributes>120.0;10.0;500.0;10.0;500.0;780.0;10.0;780.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -398,7 +402,7 @@ m2=historial</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2037</x>
+      <x>2191</x>
       <y>539</y>
       <w>210</w>
       <h>126</h>
@@ -419,7 +423,7 @@ TipoNotificacion
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2121</x>
+      <x>2275</x>
       <y>399</y>
       <w>91</w>
       <h>154</h>
@@ -439,17 +443,10 @@ m1=tipoNotificacion</panel_attributes>
     <panel_attributes>SistemaNotificacion
 -
 -
-+ notificarNuevoPedido(Pedido p) : void
-+ notificarNuevoIntercambio(Intercambio i) : void
-+ notificarNuevoProducto(Producto p) : void
-+ notificarNuevoDescuento(Descuento d) : void
-+ notificarEstadoPedido(Pedido p) : void
-+ notificarEstadoIntercambio(Intercambio i) : void
-+ enviarAlertaEmpleados(Empleado[*] empleados, String mensaje) : void
-+ notificarOfertante(ClienteRegistrado c) : void
++ notificarEmpleados(Empleado[*] empleados, String mensaje) : void
++ notificarOfertante(ClienteRegistrado c, String mensaje) : void
 + notificarComprador(ClienteRegistrado c, String mensaje) : void
 + getNotificacionesUsuario(Usuario u) : List&lt;Notificacion&gt;
-+ marcarComoLeida(Notificacion n) : void
 
 
 </panel_attributes>
@@ -475,8 +472,9 @@ m2=*notificaciones</panel_attributes>
       <w>847</w>
       <h>49</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=destinatario</panel_attributes>
+    <panel_attributes>lt=&lt;-&gt;
+m1=destinatario
+m2=* notificaciones</panel_attributes>
     <additional_attributes>10.0;40.0;730.0;40.0;730.0;10.0;770.0;10.0;770.0;40.0;1190.0;40.0</additional_attributes>
   </element>
   <element>
