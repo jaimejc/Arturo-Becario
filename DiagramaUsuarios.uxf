@@ -135,7 +135,7 @@ m2=* usuarios</panel_attributes>
       <x>1526</x>
       <y>539</y>
       <w>343</w>
-      <h>210</h>
+      <h>231</h>
     </coordinates>
     <panel_attributes>ClienteRegistrado
 --
@@ -148,12 +148,14 @@ m2=* usuarios</panel_attributes>
 + añadirAlCarrito(ProductoVenta p, int cantidad) : Boolean
 + verHistorialCompras() : List&lt;Pedido&gt;
 + solicitarIntercambio(ProductoIntercambio p) : Intercambio
-+ proponerOferta(Oferta o, Oferta o) : void
++ proponerOferta(Oferta o) : void
 + valorarProducto(ProductoVenta p, int rating, String comentario) : void
 + verCarrito() : Carrito
 + getNotificacionesCliente(ClienteRegistrado c) : List&lt;Notificacion&gt;
 + aceptarOferta(Intercambio i, Oferta o): Boolean
-+ añadirObjetoACartera(ProductoIntercambio p): Boolean</panel_attributes>
++ añadirObjetoACartera(ProductoIntercambio p): Boolean
++ ordenarCatalogoPorFiltro(TipoFiltro tf, TipoOrden to, TipoDireccion td): Boolean
++ ordenarCatalogoPorTexto(String texto): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -203,126 +205,6 @@ TipoPermiso
 m1=1..3 permisos
 r1={distintos}</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>742</x>
-      <y>203</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>ServicioBusqueda
---
-- texto : String
---
-+ buscar(String texto,
-       TipoFiltro filtro,
-       TipoOrden orden,
-       TipoDireccion direccion) 
-       : List&lt;Producto&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>504</x>
-      <y>154</y>
-      <w>147</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enum&gt;&gt;
-TipoFiltro
---
-+ RATING
-+ PRECIO
-+ CATEGORÍA
---
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>504</x>
-      <y>266</y>
-      <w>147</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enum&gt;&gt;
-TipoOrden
---
-+ NUM_VENTAS
-+ NUM_COMENTARIOS
-+ ALFABÉTICO
---
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>504</x>
-      <y>357</y>
-      <w>147</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enum&gt;&gt;
-TipoDireccion
---
-+ ASCENDENTE
-+ DESCENDENTE
---
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>644</x>
-      <y>189</y>
-      <w>112</w>
-      <h>126</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=filtro</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0;90.0;160.0;140.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>644</x>
-      <y>294</y>
-      <w>112</w>
-      <h>28</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=orden</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>644</x>
-      <y>294</y>
-      <w>112</w>
-      <h>126</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=direccion</panel_attributes>
-    <additional_attributes>10.0;150.0;90.0;150.0;90.0;10.0;140.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>882</x>
-      <y>273</y>
-      <w>448</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
-m2=busqueda</panel_attributes>
-    <additional_attributes>620.0;170.0;430.0;170.0;430.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -397,12 +279,12 @@ r1={distintos}</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1610</x>
-      <y>742</y>
+      <y>763</y>
       <w>21</w>
-      <h>224</h>
+      <h>203</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
