@@ -51,7 +51,7 @@ m2=* usuarios</panel_attributes>
       <x>280</x>
       <y>490</y>
       <w>602</w>
-      <h>455</h>
+      <h>525</h>
     </coordinates>
     <panel_attributes>Gestor
 --
@@ -68,18 +68,13 @@ m2=* usuarios</panel_attributes>
 + eliminarProducto(Producto p): Boolean
 + setContraseñaEmpleado(Empleado e, String pwd): Boolean
 + crearDescuento(Descuento d, ProductoVenta p): Boolean
-+ addPack(ProductoVenta[*] p, double precio): Pack
++ eliminarDescuentos(ProductoVenta p): Boolean
 + tasarProducto(p: ProductoIntercambio, estado: EstadoFisico, precio: double): void
 + configurarNumeroRecomendaciones(int num) : void
 + consultarValoraciones(ProductoVenta p): Rating[*]
 + setPrecioProducto(ProductoVenta p): Boolean
 + verNVentasProducto(ProductoVenta p): int
 + consultarEstadisticas() : Estadistica
-+ crearDescuentoMasXMenos(int numProducto, int numAPagar, LocalDate inicio, LocalDate fin) : Descuento
-+ crearRebaja(double porcentaje, LocalDate inicio, LocalDate fin) : Descuento
-+ crearDescuentoImporteCarrito(double importeMinimo, double cantidadReducida, LocalDate inicio, LocalDate fin) : Descuento
-+ crearDescuentoRegalo(double importeMinimo, ProductoVenta productoRegalo, LocalDate inicio, LocalDate fin) : Descuento
-+ asignarDescuentoAProducto(Descuento d, ProductoVenta p) : void
 + asignarDescuentoACategoria(Descuento d, Categoria c) : void
 + setPrecioTasacion(double precio): Boolean
 + setNumSugerenciasVentas(int n): Boolean
@@ -91,16 +86,18 @@ m2=* usuarios</panel_attributes>
 + verListaPedidos(): Pedido[*]
 + verListaIntercambios(): Intercambio[*]
 + cancelarIntercambio(Intercambio I): Boolean
-+ verOfertasIntercambio(Intercambio I): Oferta[*]</panel_attributes>
++ verOfertasIntercambio(Intercambio I): Oferta[*]
++ setStockProducto(ProductoVenta p, int stock): Boolean
++ crearPack(ProductoVenta[*], double precio): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>924</x>
+      <x>903</x>
       <y>497</y>
-      <w>518</w>
-      <h>259</h>
+      <w>595</w>
+      <h>336</h>
     </coordinates>
     <panel_attributes>Empleado
 -
@@ -121,15 +118,23 @@ m2=* usuarios</panel_attributes>
 + setTasacion(ProductoIntercambio o, Tasacion t): Boolean
 + verObjetosPorTasar(): ObjetoIntercambio[*]
 + setIntercambioRealizado(Intercambio I, Boolean realizado): Boolean
-+ cancelarIntercambio(Intercambio i): Boolean</panel_attributes>
++ cancelarIntercambio(Intercambio i): Boolean
++ setStockProducto(ProductoVenta p, int stock): Boolean
++ addProducto(String nombre, String descripcion, double precio, ImageIcon foto, CategoriaJerarquica[*] c int nStock): Boolean
++ crearPack(ProductoVenta[*], double precio): Boolean
++ addCategoria(String nombre, CategoriaJerarquica padre): Boolean
++ consultarValoraciones(ProductoVenta p): Rating[*]
++ verListaPedidos(): Pedido[*]
++ crearDescuento(Descuento d, ProductoVenta p): Boolean
++ eliminarDescuentos(ProductoVenta p): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1484</x>
+      <x>1526</x>
       <y>539</y>
-      <w>350</w>
+      <w>343</w>
       <h>182</h>
     </coordinates>
     <panel_attributes>ClienteRegistrado
@@ -170,7 +175,7 @@ m2=* usuarios</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>966</x>
+      <x>1057</x>
       <y>889</y>
       <w>147</w>
       <h>77</h>
@@ -188,15 +193,15 @@ TipoPermiso
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1036</x>
-      <y>749</y>
+      <x>1127</x>
+      <y>826</y>
       <w>84</w>
-      <h>154</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;
 m1=1..3 permisos
 r1={distintos}</panel_attributes>
-    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -351,24 +356,24 @@ m2=* clientes</panel_attributes>
     <coordinates>
       <x>875</x>
       <y>546</y>
-      <w>63</w>
+      <w>42</w>
       <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>742</x>
+      <x>875</x>
       <y>938</y>
-      <w>238</w>
+      <w>196</w>
       <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=3 permisos
 r1={distintos}</panel_attributes>
-    <additional_attributes>320.0;20.0;10.0;20.0;10.0;10.0</additional_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -402,12 +407,12 @@ r1={distintos}</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>406</x>
-      <y>938</y>
+      <y>1008</y>
       <w>406</w>
-      <h>168</h>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>560.0;220.0;10.0;210.0;10.0;10.0</additional_attributes>
+    <additional_attributes>560.0;120.0;10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
