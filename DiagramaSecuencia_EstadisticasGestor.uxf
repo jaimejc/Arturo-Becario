@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>110</x>
-      <y>25</y>
-      <w>50</w>
-      <h>15</h>
+      <x>264</x>
+      <y>144</y>
+      <w>80</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>_:Gestor_</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>275</x>
-      <y>25</y>
-      <w>70</w>
-      <h>15</h>
+      <x>528</x>
+      <y>144</y>
+      <w>112</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>est:Estadistica</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>450</x>
-      <y>25</y>
-      <w>70</w>
-      <h>15</h>
+      <x>808</x>
+      <y>144</y>
+      <w>112</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>historial:Historial</panel_attributes>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>540</x>
-      <y>25</y>
-      <w>70</w>
-      <h>15</h>
+      <x>952</x>
+      <y>144</y>
+      <w>112</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>p:ProductoVenta</panel_attributes>
     <additional_attributes/>
@@ -48,10 +48,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
-      <y>35</y>
-      <w>15</w>
-      <h>380</h>
+      <x>296</x>
+      <y>160</y>
+      <w>24</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;740.0</additional_attributes>
@@ -59,10 +59,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>305</x>
-      <y>35</y>
-      <w>15</w>
-      <h>380</h>
+      <x>576</x>
+      <y>160</y>
+      <w>24</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;740.0</additional_attributes>
@@ -70,10 +70,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>35</y>
-      <w>15</w>
-      <h>380</h>
+      <x>856</x>
+      <y>160</y>
+      <w>24</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;740.0</additional_attributes>
@@ -81,10 +81,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>35</y>
-      <w>15</w>
-      <h>380</h>
+      <x>1000</x>
+      <y>160</y>
+      <w>24</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;740.0</additional_attributes>
@@ -92,10 +92,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>130</x>
-      <y>55</y>
-      <w>10</w>
-      <h>335</h>
+      <x>296</x>
+      <y>192</y>
+      <w>16</w>
+      <h>536</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -103,10 +103,10 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>35</x>
-      <y>55</y>
-      <w>10</w>
-      <h>10</h>
+      <x>144</x>
+      <y>192</y>
+      <w>16</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -114,10 +114,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>50</y>
-      <w>100</w>
-      <h>20</h>
+      <x>152</x>
+      <y>184</y>
+      <w>160</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 consultarEstadisticas()  .</panel_attributes>
@@ -126,10 +126,10 @@ consultarEstadisticas()  .</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>65</y>
-      <w>135</w>
-      <h>35</h>
+      <x>304</x>
+      <y>208</y>
+      <w>240</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 verListaUsuariosActvividad(desde)</panel_attributes>
@@ -138,10 +138,10 @@ verListaUsuariosActvividad(desde)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>135</x>
-      <y>85</y>
-      <w>10</w>
-      <h>60</h>
+      <x>304</x>
+      <y>240</y>
+      <w>16</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -149,10 +149,10 @@ verListaUsuariosActvividad(desde)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>95</y>
-      <w>175</w>
-      <h>20</h>
+      <x>312</x>
+      <y>256</y>
+      <w>280</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getListaUsuariosActividad(desde)</panel_attributes>
@@ -161,10 +161,10 @@ getListaUsuariosActividad(desde)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>305</x>
-      <y>100</y>
-      <w>10</w>
-      <h>40</h>
+      <x>576</x>
+      <y>264</y>
+      <w>16</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -172,10 +172,10 @@ getListaUsuariosActividad(desde)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>100</y>
-      <w>180</w>
-      <h>20</h>
+      <x>584</x>
+      <y>264</y>
+      <w>288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getListaCompras()</panel_attributes>
@@ -184,10 +184,10 @@ getListaCompras()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>480</x>
-      <y>105</y>
-      <w>10</w>
-      <h>25</h>
+      <x>856</x>
+      <y>272</y>
+      <w>16</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -195,10 +195,10 @@ getListaCompras()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>115</y>
-      <w>180</w>
-      <h>20</h>
+      <x>584</x>
+      <y>288</y>
+      <w>288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Map&lt;ClienteRegistrado, Pedido[*]&gt;</panel_attributes>
@@ -207,10 +207,10 @@ Map&lt;ClienteRegistrado, Pedido[*]&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>125</y>
-      <w>175</w>
-      <h>20</h>
+      <x>312</x>
+      <y>304</y>
+      <w>280</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Map&lt;ClienteRegistrado, int&gt;</panel_attributes>
@@ -219,10 +219,10 @@ Map&lt;ClienteRegistrado, int&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>150</y>
-      <w>140</w>
-      <h>35</h>
+      <x>304</x>
+      <y>344</y>
+      <w>240</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 verRecaudacionMensual(mes, año)</panel_attributes>
@@ -231,10 +231,10 @@ verRecaudacionMensual(mes, año)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>135</x>
-      <y>170</y>
-      <w>10</w>
-      <h>60</h>
+      <x>304</x>
+      <y>376</y>
+      <w>16</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -242,10 +242,10 @@ verRecaudacionMensual(mes, año)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>180</y>
-      <w>175</w>
-      <h>20</h>
+      <x>312</x>
+      <y>392</y>
+      <w>280</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getRecaudacionMensual(mes, año)</panel_attributes>
@@ -254,10 +254,10 @@ getRecaudacionMensual(mes, año)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>305</x>
-      <y>185</y>
-      <w>10</w>
-      <h>40</h>
+      <x>576</x>
+      <y>400</y>
+      <w>16</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -265,10 +265,10 @@ getRecaudacionMensual(mes, año)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>185</y>
-      <w>180</w>
-      <h>20</h>
+      <x>584</x>
+      <y>400</y>
+      <w>288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getListaCompras()</panel_attributes>
@@ -277,10 +277,10 @@ getListaCompras()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>480</x>
-      <y>190</y>
-      <w>10</w>
-      <h>25</h>
+      <x>856</x>
+      <y>408</y>
+      <w>16</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -288,10 +288,10 @@ getListaCompras()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>200</y>
-      <w>180</w>
-      <h>20</h>
+      <x>584</x>
+      <y>424</y>
+      <w>288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Map&lt;ClienteRegistrado, Pedido[*]&gt;</panel_attributes>
@@ -300,10 +300,10 @@ Map&lt;ClienteRegistrado, Pedido[*]&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>210</y>
-      <w>175</w>
-      <h>20</h>
+      <x>312</x>
+      <y>440</y>
+      <w>280</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 double</panel_attributes>
@@ -312,10 +312,10 @@ double</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>235</y>
-      <w>140</w>
-      <h>35</h>
+      <x>304</x>
+      <y>480</y>
+      <w>248</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 verVentasTotalesPorMes(mes, año)</panel_attributes>
@@ -324,10 +324,10 @@ verVentasTotalesPorMes(mes, año)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>135</x>
-      <y>255</y>
-      <w>10</w>
-      <h>60</h>
+      <x>304</x>
+      <y>512</y>
+      <w>16</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -335,10 +335,10 @@ verVentasTotalesPorMes(mes, año)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>260</y>
-      <w>175</w>
-      <h>20</h>
+      <x>312</x>
+      <y>520</y>
+      <w>280</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getVentasTotalesPorMes(mes, año)</panel_attributes>
@@ -347,10 +347,10 @@ getVentasTotalesPorMes(mes, año)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>305</x>
-      <y>270</y>
-      <w>10</w>
-      <h>40</h>
+      <x>576</x>
+      <y>536</y>
+      <w>16</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -358,10 +358,10 @@ getVentasTotalesPorMes(mes, año)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>270</y>
-      <w>180</w>
-      <h>20</h>
+      <x>584</x>
+      <y>536</y>
+      <w>288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getListaCompras()</panel_attributes>
@@ -370,10 +370,10 @@ getListaCompras()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>480</x>
-      <y>275</y>
-      <w>10</w>
-      <h>25</h>
+      <x>856</x>
+      <y>544</y>
+      <w>16</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -381,10 +381,10 @@ getListaCompras()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>285</y>
-      <w>180</w>
-      <h>20</h>
+      <x>584</x>
+      <y>560</y>
+      <w>288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Map&lt;ClienteRegistrado, Pedido[*]&gt;</panel_attributes>
@@ -393,10 +393,10 @@ Map&lt;ClienteRegistrado, Pedido[*]&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>295</y>
-      <w>175</w>
-      <h>20</h>
+      <x>312</x>
+      <y>576</y>
+      <w>280</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Map&lt;ProductoVenta, int&gt;</panel_attributes>
@@ -405,10 +405,10 @@ Map&lt;ProductoVenta, int&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>320</y>
-      <w>105</w>
-      <h>35</h>
+      <x>304</x>
+      <y>616</y>
+      <w>184</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 consultarValoraciones(p)</panel_attributes>
@@ -417,10 +417,10 @@ consultarValoraciones(p)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>135</x>
-      <y>340</y>
-      <w>10</w>
-      <h>30</h>
+      <x>304</x>
+      <y>648</y>
+      <w>16</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -428,10 +428,10 @@ consultarValoraciones(p)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>345</y>
-      <w>440</w>
-      <h>20</h>
+      <x>312</x>
+      <y>656</y>
+      <w>704</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 getRating()</panel_attributes>
@@ -440,10 +440,10 @@ getRating()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>570</x>
-      <y>345</y>
-      <w>10</w>
-      <h>35</h>
+      <x>1000</x>
+      <y>656</y>
+      <w>16</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>bg=white</panel_attributes>
     <additional_attributes/>
@@ -451,10 +451,10 @@ getRating()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>360</y>
-      <w>440</w>
-      <h>20</h>
+      <x>312</x>
+      <y>680</y>
+      <w>704</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Rating[*]</panel_attributes>
@@ -463,10 +463,10 @@ Rating[*]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>75</x>
-      <y>380</y>
-      <w>65</w>
-      <h>20</h>
+      <x>208</x>
+      <y>712</y>
+      <w>104</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 est (estadísticas)</panel_attributes>
@@ -475,10 +475,10 @@ est (estadísticas)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>0</x>
-      <y>0</y>
-      <w>635</w>
-      <h>425</h>
+      <x>88</x>
+      <y>104</y>
+      <w>1016</w>
+      <h>680</h>
     </coordinates>
     <panel_attributes>sd Consultar Estadisticas Gestor</panel_attributes>
     <additional_attributes/>
