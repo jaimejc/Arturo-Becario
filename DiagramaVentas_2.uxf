@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>105</y>
-      <w>75</w>
-      <h>90</h>
+      <x>656</x>
+      <y>56</y>
+      <w>120</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0;130.0;10.0</additional_attributes>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>185</y>
-      <w>105</w>
-      <h>80</h>
+      <x>544</x>
+      <y>184</y>
+      <w>168</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>/Descuento/
 --
@@ -31,10 +31,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>130</y>
-      <w>110</w>
-      <h>200</h>
+      <x>384</x>
+      <y>96</y>
+      <w>176</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>200.0;180.0;120.0;180.0;120.0;260.0;10.0;260.0;120.0;260.0;120.0;380.0;10.0;380.0;120.0;380.0;120.0;10.0;10.0;10.0;120.0;10.0;120.0;120.0;10.0;120.0</additional_attributes>
@@ -42,10 +42,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>120</y>
-      <w>105</w>
-      <h>35</h>
+      <x>224</x>
+      <y>80</y>
+      <w>168</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>MasXMenos
 --
@@ -56,10 +56,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>175</y>
-      <w>105</w>
-      <h>35</h>
+      <x>224</x>
+      <y>168</y>
+      <w>168</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>Rebaja
 --
@@ -69,10 +69,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>245</y>
-      <w>105</w>
-      <h>35</h>
+      <x>224</x>
+      <y>280</y>
+      <w>168</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>ImporteCarrito
 --
@@ -84,10 +84,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>305</y>
-      <w>105</w>
-      <h>35</h>
+      <x>224</x>
+      <y>376</y>
+      <w>168</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>Regalo
 --
@@ -98,10 +98,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>190</y>
-      <w>805</w>
-      <h>20</h>
+      <x>704</x>
+      <y>192</y>
+      <w>1288</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1..* tipoJuego
@@ -111,10 +111,10 @@ m2=descuento</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>210</y>
-      <w>655</w>
-      <h>305</h>
+      <x>704</x>
+      <y>224</y>
+      <w>1048</w>
+      <h>488</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=* descuentos</panel_attributes>
@@ -123,10 +123,10 @@ m1=* descuentos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>375</x>
-      <y>80</y>
-      <w>135</w>
-      <h>45</h>
+      <x>760</x>
+      <y>16</y>
+      <w>216</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>SistemaNotificacion
 -
@@ -137,10 +137,10 @@ m1=* descuentos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>245</y>
-      <w>110</w>
-      <h>115</h>
+      <x>704</x>
+      <y>280</y>
+      <w>176</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;
 m1=descuentoCarrito
@@ -150,10 +150,10 @@ m2=* carritos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>260</y>
-      <w>60</w>
-      <h>380</h>
+      <x>664</x>
+      <y>304</y>
+      <w>96</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1..*productos
@@ -163,10 +163,10 @@ m2=0..1 descuento</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>335</x>
-      <y>350</y>
-      <w>165</w>
-      <h>80</h>
+      <x>696</x>
+      <y>448</y>
+      <w>264</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Carrito
 --
@@ -174,17 +174,17 @@ _- horasCaducidad: int_
 -
 + eliminarCarrito(): Boolean
 + eliminarProducto(ProductoVenta p): Boolean
-+ reducirStock(ProductoVenta p): Boolean
-+ aumentarStock(ProductoVenta p): Boolean</panel_attributes>
++ setStock(ProductoVenta p, int stock): Boolean
++ precio(): double</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>395</x>
-      <y>425</y>
-      <w>55</w>
-      <h>215</h>
+      <x>792</x>
+      <y>568</y>
+      <w>88</w>
+      <h>344</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=* productos</panel_attributes>
@@ -193,10 +193,10 @@ m2=* productos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>305</y>
-      <w>105</w>
-      <h>55</h>
+      <x>1056</x>
+      <y>376</y>
+      <w>168</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>ClienteRegistrado
 -
@@ -206,10 +206,10 @@ m2=* productos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>350</y>
-      <w>75</w>
-      <h>20</h>
+      <x>952</x>
+      <y>448</y>
+      <w>120</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=carrito</panel_attributes>
@@ -218,10 +218,10 @@ m2=carrito</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>455</y>
-      <w>200</w>
-      <h>80</h>
+      <x>928</x>
+      <y>616</y>
+      <w>320</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Gestor
 -</panel_attributes>
@@ -230,10 +230,10 @@ m2=carrito</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>980</x>
-      <y>500</y>
-      <w>15</w>
-      <h>145</h>
+      <x>1728</x>
+      <y>688</y>
+      <w>24</w>
+      <h>232</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
@@ -241,10 +241,10 @@ m2=carrito</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>855</x>
-      <y>635</y>
-      <w>140</w>
-      <h>70</h>
+      <x>1528</x>
+      <y>904</y>
+      <w>224</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Empleado
 -</panel_attributes>
@@ -253,10 +253,10 @@ m2=carrito</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>530</y>
-      <w>445</w>
-      <h>140</h>
+      <x>832</x>
+      <y>736</y>
+      <w>712</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;260.0;870.0;260.0;310.0;260.0;310.0;10.0</additional_attributes>
@@ -264,10 +264,10 @@ m2=carrito</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1035</x>
-      <y>190</y>
-      <w>110</w>
-      <h>135</h>
+      <x>1816</x>
+      <y>192</y>
+      <w>176</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1= categoria</panel_attributes>
@@ -276,10 +276,10 @@ m1= categoria</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>325</y>
-      <w>175</w>
-      <h>315</h>
+      <x>384</x>
+      <y>408</y>
+      <w>280</w>
+      <h>504</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=productoRegalo
@@ -289,10 +289,10 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>205</x>
-      <y>630</y>
-      <w>220</w>
-      <h>105</h>
+      <x>488</x>
+      <y>896</y>
+      <w>352</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>ProductoVenta
 -</panel_attributes>
@@ -301,10 +301,10 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1135</x>
-      <y>170</y>
-      <w>105</w>
-      <h>95</h>
+      <x>1976</x>
+      <y>160</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 TipoDeJuego
@@ -316,10 +316,10 @@ TipoDeJuego
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1135</x>
-      <y>280</y>
-      <w>105</w>
-      <h>95</h>
+      <x>1976</x>
+      <y>336</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 CategoriaJerarquica
