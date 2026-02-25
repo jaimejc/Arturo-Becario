@@ -107,13 +107,21 @@ m2=* usuarios</panel_attributes>
 + crearTasacion(): Boolean
 + crearTasacion(ProductoIntercambio p): Tasacion
 + darAltaIntercambio(Intercambio i): Boolean
-+ cambiarEstadoPedido(Pedido p, EstadoPedido estado) : Boolean
++ setEstadoPedido(Pedido p, Estado e) : Boolean
 + crearPack(ProductoVenta[*] p): Pack
 + tasarProducto(p: ProductoIntercambio, estado: EstadoFisico, precio: double): void
 + modificarStock(ProductoVenta p): Boolean
 + tienePermiso(TipoPermiso p) : boolean
 + getNotificacionesEmpleado(Empleado e) : List&lt;Notificacion&gt;
-+ verListaPedidos(): Pedido[*]</panel_attributes>
++ verListaPedidos(): Pedido[*]
++ consultarValoraciones(ProductoVenta p): Rating[*]
++ verOfertasIntercambio(Intercambio I): Oferta[*]
++ verInfoOferta(Oferta o): Oferta
++ verInfoProductos():  ProductoVenta[*]
++ setTasacion(ProductoIntercambio o, Tasacion t): Boolean
++ verObjetosPorTasar(): ObjetoIntercambio[*]
++ setIntercambioRealizado(Intercambio I, Boolean realizado): Boolean
++ cancelarIntercambio(Intercambio i): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -135,10 +143,11 @@ m2=* usuarios</panel_attributes>
 + añadirAlCarrito(ProductoVenta p, int cantidad) : Boolean
 + verHistorialCompras() : List&lt;Pedido&gt;
 + solicitarIntercambio(ProductoIntercambio p) : Intercambio
-+ proponerOferta(Oferta a, ClienteResgitrado c) : void
++ proponerOferta(Oferta o, Oferta o) : void
 + valorarProducto(ProductoVenta p, int rating, String comentario) : void
 + verCarrito() : Carrito
-+ getNotificacionesCliente(ClienteRegistrado c) : List&lt;Notificacion&gt;</panel_attributes>
++ getNotificacionesCliente(ClienteRegistrado c) : List&lt;Notificacion&gt;
++ aceptarOferta(Intercambio i, Oferta o): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
