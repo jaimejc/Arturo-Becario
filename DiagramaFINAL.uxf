@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>24</y>
+      <w>256</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/Producto/
+--
+- nombre: String
+- descripcion: String
+- idUnico: String {readOnly}
+- foto: ImageIcon
+- tipo: String
+- tipoProducto: TipoProducto
+--
+/+ getTipoDetallado(): String/</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>224</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>ProductoVenta
+--
+- nStock: int
+- precio: double
+- nVentas: int
+- ratings: List&lt;Rating&gt;
+- descuento: Descuento
+--
++ getTipoDetallado(): String
++ getPrecioFinal(): double
++ getCategorias(): List&lt;CategoriaJerarquica&gt;
++ ratingMedio(): double
++ perteneceACategoria(nombreCat: String): boolean
++ añadirRating(r: Rating): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>224</y>
+      <w>312</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>ProductoIntercambio
+--
+- tasado: boolean
+- enIntercambio: boolean
+- ofertaRealizada: Oferta
+- ofertasRecibidas: List&lt;Oferta&gt;
+- tasacion: Tasacion
+- cartera: Cartera
+- diasLimiteIntercambio: int
+--
++ getTipoDetallado(): String
++ añadirOfertaRecibida(o: Oferta): boolean
++ eliminarOfertaRecibida(o: Oferta): boolean
++ setEnIntercambio(enIntercambio: boolean, dias: int): boolean
++ getValorTasacion(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>472</y>
+      <w>280</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Pack
+--
+- nombre: String
+- descuento: double
+- subPacks: List&lt;Pack&gt;
+- productos: List&lt;ProductoVenta&gt;
+--
++ añadirProducto(p: ProductoVenta): boolean
++ añadirSubPack(subPack: Pack): void
++ hayStockDisponible(): boolean
++ reservarStock(): void
++ liberarStock(): void
++ getPrecioTotal(): double
++ getTodosLosProductos(): List&lt;ProductoVenta&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>472</y>
+      <w>312</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Carrito
+--
+- {static} horasCaducidad: int = 48
+- productos: List&lt;ProductoVenta&gt;
+- packs: List&lt;Pack&gt;
+- {static} descuentosGlobales: List&lt;Descuento&gt;
+--
++ añadirProducto(p: ProductoVenta, cantidad: int): boolean
++ añadirPack(pack: Pack): boolean
++ eliminarProducto(p: ProductoVenta): boolean
++ vaciarCarrito(): void
++ pagarCarrito(): void
++ calcularPrecioBase(): double
++ {static} añadirDescuentoGlobal(d: Descuento): void
++ precioFinalCarrito(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>208</x>
+      <y>712</y>
+      <w>416</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>/Descuento/
+--
+- fechaInicio: LocalDateTime
+- fechaFin: LocalDateTime
+--
+/+ getPrecioFinal(precioTotal: double): double/
++ aplicarDescuentoEspecífico(productos: List&lt;ProductoVenta&gt;, precio: double): double
++ esVigente(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>888</y>
+      <w>200</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Rebaja
+--
+- porcentaje: double
+--
++ getPrecioFinal(precioBase: double): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>888</y>
+      <w>352</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>MasXMenos
+--
+- numProductos: int
+- numAPagar: int
+- producto: ProductoVenta
+--
++ aplicarDescuentoEspecífico(lista: List&lt;ProductoVenta&gt;, precio: double): double
++ getPrecioFinal(precioTotal: double): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>888</y>
+      <w>240</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Regalo
+--
+- importeMinimo: double
+- productoRegalo: ProductoVenta
+--
++ getPrecioFinal(precioTotal: double): double
++ correspondeRegalo(precioTotal: double): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>112</x>
+      <y>816</y>
+      <w>208</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;240.0;50.0;10.0;50.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>816</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>816</y>
+      <w>200</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;230.0;50.0;230.0;90.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>288</y>
+      <w>256</w>
+      <h>712</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=1
+r2=producto</panel_attributes>
+    <additional_attributes>300.0;860.0;300.0;870.0;10.0;870.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>136</y>
+      <w>240</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;280.0;70.0;10.0;70.0;10.0;110.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>136</y>
+      <w>160</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;180.0;70.0;180.0;110.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>184</x>
+      <y>376</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>544</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>616</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*
+r2=subPacks</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;50.0;70.0;50.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+
+</diagram>
