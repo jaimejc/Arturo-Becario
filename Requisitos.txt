@@ -1,0 +1,952 @@
+
+
+
+
+
+A Ellos
+
+Documento de Análisis de Requisitos
+
+Jaime Jiménez Caballero
+Luis Oro Arévalo
+Diego Terrés Morata
+Arturo Pérez Noves
+
+Fecha: 31/01/2026
+
+
+
+
+
+Índice:
+Introducción:
+Propósito del Sistema
+Ámbito del Sistema
+Objetivos y criterios de éxito del proyecto
+Definiciones, acrónimos y abreviaturas
+Descripción del sistema:
+Requisitos Funcionales
+Todos los Usuarios
+Gestor
+Empleado
+Permiso de Intercambio
+Permiso de Pedido
+Permiso de Producto
+Cliente
+Registrado
+No Registrado
+Requisitos No Funcionales
+Casos de Uso:
+Diagrama de Casos de Uso
+Descripción de los Casos de Uso
+Caso 1: Compra de un objeto (o varios) por un usuario
+Caso 2: Intercambio de productos de usuarios independientes
+Caso 3: Solicitud y tasación de un producto del Usuario
+Maquetas
+
+
+
+
+
+
+
+
+
+
+
+
+Introducción:
+
+1.1 PROPÓSITO DEL SISTEMA
+La aplicación propuesta es: “A Ellos”, que debe permitir la venta de productos nuevos (provenientes de la tienda) y el intercambio de objetos de segunda mano entre usuarios registrados independientes sin dinero de por medio.
+
+Para llevar a cabo las ventas, tanto el gestor como los empleados con permiso de “Productos” pueden dar de alta estos objetos, decidiendo su precio y su categoría (que puede ser jerarquizada en el caso de figuras). Para estas ventas hay que tener en cuenta el stock.
+
+En el caso de los intercambios, los usuarios han de tasar los objetos que van a formar parte del intercambio. Estos objetos se añadirán a su cartera y se podrán usar tanto para crear un intercambio como para ofrecerlo en un intercambio ya creado, pero no se pueden hacer dos de estas acciones a la vez. El usuario que ha creado el intercambio puede ver las ofertas que le llegan por su objeto, las cuales puede aceptar, rechazar o ignorar hasta una fecha límite pasada la cual, tras un tiempo decidido por el gestor (48 h), el intercambio se cancelará automáticamente si el usuario no decide aceptar ninguna de las ofertas. El usuario podrá aceptar cualquier oferta en cualquier momento y, en este caso, los objetos que forman parte en el intercambio se cambiarán automáticamente entre las carteras de los usuarios sin necesidad de volver a tasarlos.
+
+Para encontrar objetos, todos los usuarios podrán ver un catálogo de objetos tanto de la tienda como de segunda mano, que tiene unos recomendadores según productos similares al usuario (filtrado colaborativo), lo que compra, las valoraciones, etc. Además, los usuarios registrados tendrán un sistema de búsqueda por nombre o por categoría para encontrar objetos de forma más sencilla.
+
+Al registrarse, a cada usuario se le asigna un carrito de la compra, al cual, se le pueden añadir objetos y eliminarlos, y posteriormente, se puede comprar o cancelar. Pasadas 48 horas después de añadir un objeto, si no se ha comprado el carrito, este se eliminará automáticamente.
+
+El propósito de la aplicación es facilitar y aumentar las ventas y permitir realizar intercambios con comisión que generan ingresos para la tienda, además de darle una segunda vida a estos objetos.
+
+
+
+
+
+
+
+1.2 ÁMBITO DEL SISTEMA
+El sistema debe permitir:
+Ventas online
+Generar un ID único para cada venta que se realiza
+Realizar el pago de las ventas
+Valoraciones por usuarios para los objetos que se venden (del 1 al 5 y texto)
+Guardar estadísticas sobre el historial de compras e intercambios y actividad de usuarios
+Que los usuarios se registren y asignarles un carrito de la compra, una cartera de objetos tasados y un ID único
+A los usuarios iniciar y cerrar sesión, siempre que estén registrados
+Que los usuarios suban intercambios, los cuales pueden recibir ofertas por parte de otros usuarios
+Notificar a usuarios de descuentos o productos que les puedan gustar
+Que los empleados puedan subir packs de objetos en venta
+Buscar objetos por nombre o filtros
+Ver un catálogo de objetos tanto en venta como de segunda mano
+Intercambios de objetos tasados entre usuarios registrados
+Realizar ofertas a estos intercambios
+Realizar el pago de tasaciones
+Que los usuarios añadan las categorías de sus objetos tasados
+Que los usuarios escriban lo que quieren a cambio de su objeto
+Que los usuarios cambien su contraseña
+Guardar contraseñas (modificadas para que no se pueda acceder) y fechas en las que se registran los usuarios
+Controlar el stock de productos
+
+El sistema no tiene que:
+Aceptar devoluciones
+Enviar productos
+Permitir la recompra de objetos
+Permitir intercambio por dinero
+Admitir devoluciones
+Permitir que los clientes no registrados vean el catálogo de intercambios
+Tener un chat entre usuarios
+Permitir que los usuarios valoren productos de intercambio o a otros usuarios, ni objetos que no han comprado
+Permitir que un objeto tasado se use para ofertar en varios intercambios
+Permitir que los usuarios eliminen objetos de su cartera
+Registrar compras presenciales
+
+1.3 OBJETIVOS Y CRITERIOS DE ÉXITO DEL PROYECTO
+Los objetivos principales del sistema son:
+Por parte del gestor:
+Añadir y borrar objetos que están a la venta
+Dar de alta empleados
+Ver estadísticas (desarrolladas en apartados anteriores)
+Por parte de los empleados:
+Los que tienen permiso de Intercambios deben poder subir tasaciones y dar de alta intercambios realizados
+Los que tienen permiso de Pedidos han de recibir notificaciones de pedidos y añadir o disminuir el stock de los productos
+Los que tienen permiso de Productos pueden ver el stock, precio y categoría de un producto, dar de alta productos y packs, gestionar categorías de los productos en ventas y actualizar nombres y descripciones de productos nuevos
+Clientes Registrados
+Pueden comprar objetos, subir objetos tasados para intercambios y realizar ofertas en otros intercambios
+Clientes No Registrados
+Solo pueden buscar productos y ver el catálogo
+Cualquier usuario
+Puede registrarse e iniciar y cerrar sesión además de buscar productos y ver el catálogo
+
+1.4 DEFINICIONES, ACRÓNIMOS Y ABREVIATURAS
+Definiciones:
+Filtrado Colaborativo - Recomendación de productos que lo han comprado clientes similares a tí
+Pack - Conjunto de dos o más productos que se venden de forma conjunta como una única unidad comercial, con un precio total inferior a la suma de los precios individuales de los productos que lo componen, y cuya disponibilidad depende del stock de dichos productos
+
+Acrónimos:
+RF  -  Requisito Funcional
+TU - Todos los usuarios, usamos este concepto para especificar que cualquier tipo de usuario puede hacer una funcionalidad concreta
+GTR - Usuario gestor
+EMP - Empleado
+INT - Empleado con Permiso de Intercambio
+PED - Empleado con Permiso de Pedidos
+PDT - Empleado con Permiso de Productos
+CR - Cliente Registrado
+CNR - Cliente No Registrado
+
+Descripción del Sistema:
+
+2.1 Requisitos Funcionales
+
+[RF-TU-1]: Iniciar y Cerrar Sesión:
+El sistema pide nombre de usuario y contraseña para acceder a una sesión. Existe un botón el cual sirve para cerrar la sesión, es decir, que se requiera otro inicio de sesión para acceder.
+
+[RF-GTR-1]: Cambiar el tiempo (días/horas) tras el cual el carrito se elimina:
+El gestor debe ser capaz de modificar el periodo tras el cual el carrito se borra completamente en caso de no ser accedido o modificado por el usuario.
+
+[RF-GTR-2]: Cambiar el precio que cuestan las tasaciones:
+El gestor debe poder cambiar el precio que los usuarios deben pagar por tasar un producto.
+
+[RF-GTR-3]: Cambiar el tiempo (días/horas) tras el cual pasada la fecha de un intercambio, este se cancela:
+El gestor debe ser capaz de modificar el periodo tras el cual un intercambio se borra en caso de no ser accedido o modificado por el usuario.
+
+[RF-GTR-4]: Cambiar el nº de productos que generan los recomendadores:
+El gestor debe ser capaz de modificar el número de productos que aparecen en el apartado de recomendaciones automáticas.
+
+[RF-GTR-5]: Ajustes de cuenta de Gestor:
+El gestor tiene un usuario predefinido y podrá cambiar su contraseña cuando quiera.
+
+[RF-GTR-6]: Ajustes de cuenta de Empleados:
+El gestor crea cuentas de usuario indicando su permiso, usuario y contraseña. Después podrá resetear o cambiar la contraseña de empleados (sin poder ver las contraseñas actuales) y cambiar los permisos. También podrá ver el listado de empleados y sus permisos. Cabe detallar que no podrá eliminar dichas cuentas.
+
+[RF-GTR-7]: Acceso a estadísticas e información:
+El gestor tiene la capacidad de ver el historial de compras, quiénes son los usuarios más activos en la plataforma, estos son los que más actividad de compras o intercambios tienen (una sección para cada lista ordenada), las recaudaciones mensuales de la empresa y los productos en relación a las ventas que han tenido, así como las ventas por mes totales, valoraciones y ratings.
+
+
+[RF-GTR-8]: Gestión de productos y relacionado:
+El gestor podrá dar de alta productos (mediante un fichero que suba o la misma interfaz), cambiar precios, ver valoraciones y número de ventas de cada producto, gestionar el árbol jerárquico de categorías y crear descuentos de varios tipos; el ti
+aplicar más de un descuento a un producto.
+
+[RF-GTR-9]: Packs y relacionado:
+El gestor podrá crear packs que consistirán en una agrupación de productos que al comprarlos en este pack costará algo menos. Dichos productos no pueden ser del mismo tipo. Puede crear packs de packs. A un pack no se le puede aplicar descuentos. En caso de no haber stock de algún producto que lo conforme el pack se agota también debido a que depende de los stocks individuales.
+
+[RF-GTR-10]: Intercambios y relacionado:
+El gestor podrá ver los intercambios (pasados y presentes). También podrá cancelarlos y ver ofertas de un intercambio.
+
+[RF-GTR-11]: Configurar Descuentos:
+
+ 
+
+[RF-EMP-1]: Consultar Ventas, valoraciones y ofertas
+El sistema debe permitir al empleado acceder a un visor de ventas en el que se muestre la información correspondiente a los pedidos realizados por los clientes:
+Identificador del pedido
+Productos adquiridos
+Fecha de la compra 
+Estado del pedido
+Asimismo, el sistema debe permitir al empleado consultar las valoraciones realizadas por los clientes sobre los productos nuevos adquiridos. Para cada valoración, el sistema deberá mostrar:
+Rating numérico asignado
+Texto descriptivo introducido por el cliente
+Las valoraciones no podrán ser modificadas ni eliminadas por el empleado, limitándose su funcionalidad a la consulta de la información. Adicionalmente, el sistema debe permitir al empleado visualizar las ofertas realizadas por los clientes en el contexto de los intercambios de objetos de segunda mano. El empleado podrá consultar la información asociada a cada oferta, incluyendo:
+Objetos ofrecidos
+Intercambio al que se refiere
+Estado actual
+El sistema no permitirá al empleado intervenir en la aceptación o rechazo de las ofertas, ya que estas acciones corresponden exclusivamente a los clientes implicados en el intercambio.
+[RF-EMP-2]: Consultar Stock
+El sistema debe permitir al empleado acceder a un visor de productos en el que se muestre, para cada producto nuevo, la información relativa al stock actual:
+Número de unidades disponibles 
+Precio asignado
+Categoría a la que pertenece el producto
+La información presentada deberá reflejar en todo momento el estado real del inventario, teniendo en cuenta las reservas de stock realizadas al añadir productos al carrito y las variaciones derivadas de la preparación y entrega de pedidos.
+
+La consulta de stock deberá permitir al empleado identificar de forma clara los productos que no disponen de unidades disponibles. Esta funcionalidad tiene como objetivo facilitar al empleado el control del inventario y el seguimiento de la disponibilidad de los productos, sin permitir la modificación directa del stock.
+
+
+Tipos de Permisos dentro de los Empleados:
+[RF-EMP-INT-1]: Realizar tasaciones 
+Permitir que un empleado con permiso de intercambios realice la tasación de los objetos de segunda mano previamente dados de alta por clientes registrados. Esta funcionalidad estará disponible únicamente para empleados autenticados que dispongan del permiso correspondiente y se activará únicamente cuando el cliente haya abonado la tasa de tasación establecida por la tienda.
+
+El sistema debe permitir al empleado acceder a un listado de objetos pendientes de tasación y visualizar la información asociada a cada objeto:
+Descripción, en formato de texto
+Categoría asignada
+Año del objeto
+Fotografía
+Una vez realizada la tasación, el sistema deberá registrar el estado (perfecto, muy bueno, uso ligero, uso evidente, muy usado, dañado) y el valor económico asignado, marcando el objeto como “Tasado” y habilitándolo para su uso en intercambios y ofertas. El empleado no podrá modificar tasaciones ya realizadas, ni el cliente podrá alterar el estado o el precio asignados por la tienda.
+
+
+[RF-EMP-INT-2]: Dar de alta intercambios realizados
+Permitir que un empleado con permiso de intercambios registre en el sistema la realización efectiva de un intercambio entre clientes. Esta funcionalidad se utilizará una vez que los clientes hayan llevado a cabo el intercambio físico de los objetos en la tienda, conforme a la fecha y hora previamente acordadas.
+
+El sistema debe permitir al empleado identificar el intercambio correspondiente y verificar los objetos y clientes implicados. Una vez confirmado que el intercambio ha tenido lugar, el empleado deberá registrar el intercambio como “Realizado”. Como consecuencia de esta acción, el sistema deberá actualizar las carteras privadas de los clientes, eliminando los objetos intercambiados e impidiendo que dichos objetos vuelvan a participar en otros intercambios u ofertas.
+
+El registro del intercambio deberá quedar almacenado en el sistema a efectos de trazabilidad y control, sin que se genere ningún tipo de valoración sobre los productos o los usuarios implicados.
+
+[RF-EMP-INT-3]: Cancelar intercambios si cliente no se presenta a la tienda
+El empleado podrá cancelar un intercambio entre 2 clientes si uno o ninguno se presenta a la tienda física para realizar dicho intercambio. Ningún usuario será penalizado.
+
+[RF-EMP-INT-4]: Marcar un Intercambio como “Realizado”
+Si el intercambio ha tenido lugar en la fecha acordada y en la tienda física, el empleado revisará que ambos productos cumplen sus expectativas y se realizará el intercambio. Los productos del subastador pasarán a la cartera del ofertante y viceversa. Finalmente, el Empleado marcará el estado del intercambio como “Realizado”.
+
+
+[RF-EMP-PED-1]: Gestionar pedidos de venta de productos
+Permitir que un empleado con permiso de pedidos gestione los pedidos de productos realizados por los clientes, desde el momento en que la compra es confirmada hasta la recogida presencial del pedido en la tienda. 
+
+  de la existencia de un nuevo pedido pendiente de gestión. Dicha notificación permitirá al empleado acceder al listado de pedidos y consultar la información asociada a cada uno de ellos.
+
+El sistema debe permitir al empleado consultar los pedidos pendientes y proceder a su preparación. Para ello, el empleado deberá realizar las acciones físicas necesarias fuera del sistema, consistentes en acudir al almacén, recoger los productos correspondientes y preparar el paquete. Una vez realizada la preparación, el sistema debe permitir al empleado marcar el pedido con el estado “Listo para entrega”.
+
+El sistema debe permitir al empleado actualizar el estado del pedido a lo largo de su ciclo de vida, pudiendo marcarlo como “En preparación”, “Listo para entrega” y, finalmente, como “Recogido” cuando el cliente acuda a la tienda a retirar el pedido. Al marcar un pedido cómo recogido, el sistema deberá eliminar dicho pedido del listado de pedidos pendientes del empleado.
+
+[RF-EMP-PED-2]: Actualizar el Stock
+Permitir que un empleado con permiso de pedidos modifique el stock de los productos nuevos como consecuencia de la preparación y entrega de los pedidos gestionados. Esta funcionalidad tiene como objetivo garantizar la coherencia entre el inventario de la tienda y las operaciones de venta realizadas.
+
+El sistema debe permitir al empleado añadir o disminuir el stock de los productos incluidos en un pedido cuando sea necesario, reflejando correctamente las variaciones de inventario derivadas de incidencias durante la preparación o la entrega del pedido. Los cambios realizados deberán quedar registrados en el sistema para asegurar la consistencia del stock disponible.
+
+La actualización del stock deberá integrarse con el proceso de gestión del pedido, de manera que las modificaciones realizadas se reflejen de forma inmediata en la disponibilidad de los productos y en el estado del inventario de la tienda.
+
+
+[RF-EMP-PDT-1]: Dar de alta productos
+Esta funcionalidad se aplicará exclusivamente a productos nuevos, no a objetos de segunda mano. El sistema debe permitir al empleado introducir la información necesaria para el alta de un producto nuevo, incluyendo:
+Nombre
+Descripción
+Precio
+Fotografía
+Categoría asignada
+Stock inicial
+
+Asimismo, el sistema deberá permitir completar los atributos específicos en función del tipo de producto. Para cómics:
+Autor
+Editorial
+Año
+Número de Páginas
+Para Juegos de Mesa:
+Número de Jugadores
+Rango de edad
+Tipo de Juego  (Cartas, tablero, miniatura, dados)
+Para Figuras:
+Marca
+Material
+Dimensiones
+Categorías Jerárquicas (anime, ciencia, ficción, distopías) 
+Una vez dado de alta, el producto quedará disponible para su visualización y compra por parte de los clientes.
+
+[RF-EMP-PDT-2]: Configurar packs de venta
+Permitir que un empleado con permiso de producto configure packs de venta formados por varios productos nuevos que se comercializan de manera conjunta. El sistema debe permitir al empleado seleccionar los productos que formarán parte del pack, garantizando que no se incluyen dos productos del mismo tipo dentro de un mismo pack. Asimismo, el sistema deberá permitir establecer un precio para el pack que sea inferior a la suma de los precios individuales de los productos que lo componen.
+
+El stock del pack deberá depender del stock de los productos individuales incluidos. El sistema debe garantizar que un pack deje de estar disponible para la venta cuando alguno de los productos que lo integran se quede sin stock. El empleado podrá crear packs dentro de otros packs, respetando las mismas restricciones de composición y disponibilidad.
+
+[RF-EMP-PDT-3]: Gestionar categorías (ventas)
+Permitir que un empleado con permiso de producto gestione las categorías asociadas a los productos de la tienda. Esta funcionalidad estará disponible únicamente para empleados autenticados con el permiso correspondiente y se limitará a las categorías de venta, no a las categorías de los objetos de intercambio.
+
+El sistema debe permitir al empleado crear y organizar categorías de productos nuevos, respetando la estructura jerárquica definida por el sistema. Asimismo, el empleado podrá asignar o modificar la categoría de un producto nuevo existente. En ningún caso el empleado podrá gestionar categorías asociadas a objetos de segunda mano destinados a intercambios.
+
+
+[RF-EMP-PDT-4]: Pueden ver valoraciones, ventas, dar de alta productos, gestionar ofertas
+Permitir que un empleado con permiso de producto consulte información relacionada con la actividad comercial de la tienda y realice determinadas tareas de supervisión. El sistema debe permitir al empleado consultar las valoraciones realizadas por los clientes sobre los productos, incluyendo el rating numérico y el texto descriptivo asociado. Asimismo, el empleado podrá consultar la información relativa a las ventas realizadas, con el objetivo de analizar el comportamiento de los productos y su aceptación por parte de los clientes.
+
+Adicionalmente, el sistema debe permitir al empleado gestionar las ofertas existentes en el sistema con fines de control y mantenimiento, pudiendo visualizarlas y eliminarlas cuando proceda conforme a las normas de funcionamiento de la aplicación, sin intervenir en la aceptación o rechazo de intercambios, que corresponde exclusivamente a los clientes.
+
+
+[RF-CR-1]: Alta y Tasación de un objeto de segunda mano:
+Cualquier cliente que esté registrado puede incorporar un objeto de segunda mano en su cartera personal con el objetivo de hacer intercambios con otros clientes. Pueden solicitar opcionalmente una tasación oficial realizada por la tienda que asigne un valor económico de referencia al objeto, mediante el pago de una tasa. Para ello, el sistema ofrecerá una serie de funcionalidades únicamente accesibles a aquellos clientes registrados. Una de esas funcionalidades es que el Cliente debe especificar los campos:
+Descripción del producto, en formato de texto
+Año del producto
+Una vez completado el alta, el sistema debe registrar el objeto en la cartera personal del cliente y marcarlo inicialmente como “No Tasado”. Mientras el objeto no esté tasado, no podrá utilizarse en intercambios ni en ofertas, no obstante, tampoco se eliminará de la cartera.
+	
+El sistema debe dar la opción de tasación y el cliente decidirá si realizarlo o no, teniendo en cuenta que para tasar un objeto, él mismo tendrá que pagar una tasa. Si el cliente decide procesar la tasación, una vez confirmado el pago, el objeto tendrá un valor en euros que ayudará a determinar si un intercambio es razonable y cambiará su estado a “Tasado”.
+
+[RF-CR-2]: Realizar un Intercambio
+Permitir que un cliente registrado realice un intercambio de objetos de segunda mano con otros clientes también registrados. Intercambiando uno o varios objetos propios por uno o varios objetos de otro usuario, sin que intervenga dinero o bonos. Esta funcionalidad debe estar disponible únicamente para los clientes autenticados y solo para objetos previamente tasados por tienda. 
+
+El sistema debe permitir al cliente iniciar un intercambio seleccionando uno de sus objetos tasados y asociándolo a una categoría. Al crear el intercambio, el cliente deberá especificar, mediante texto descriptivo, qué objeto u objetos desea recibir a cambio. No se permitirá incluir el mismo objeto más de una vez, ni como objeto ofrecido ni como objeto solicitado.
+Cada intercambio debe registrar y mostrar de forma explícita:
+Descripción del objeto, en formato de texto
+Fotografía
+Tasación económica asignada por la tienda
+Descripción/Explicación del intercambio deseado
+Fecha límite, si se supera esta fecha y el intercambio no ha tenido lugar, el sistema lo borrará automáticamente. Liberará los objetos involucrados para que puedan utilizarse en futuros intercambios u ofertas
+El sistema debe permitir al cliente que inicia el intercambio, visualizar las ofertas recibidas y aceptar o eliminar cualquiera de ellas. No se habilitará ningún sistema de mensajería entre los clientes durante dicho proceso. Por último, si el cliente acepta una oferta, el propio sistema fijará una fecha y hora para la realización del intercambio en la tienda física, enviando una notificación al cliente ofertante con dicha información. Una vez realizado el intercambio, se eliminarán los objetos involucrados. 
+
+[RF-CR-2.1]: Realizar una oferta
+Permitir que un cliente registrado realice una o varias ofertas sobre un intercambio previamente creado por otro cliente, ofreciendo uno o varios objetos propios a cambio del objeto u objetos solicitados, sin que intervenga dinero en la operación.
+
+El sistema debe permitir al cliente seleccionar uno o varios de sus objetos tasados para realizar una oferta, siempre que dichos objetos no estén participando en otro intercambio u oferta. El cliente podrá borrar sus ofertas antes de que sean aceptadas. En ningún caso se permitirá la valoración de los productos ni de los usuarios como resultado de la realización de una oferta o de un intercambio. 
+
+
+[RF-CNR-1]: Registrarse:
+El sistema pide DNI o pasaporte único, un nombre de usuario único (nickname) y contraseña que se puede cambiar; si se registra correctamente, se le asigna un ID único. Hay que guardar la fecha que se dio de alta. Al registrarse, el cliente tiene una cartera (privada) vacía de objetos (tasados).
+
+[RF-CNR-2]: Restricciones varias:
+Un cliente no registrado no puede ver intercambios ni ofertas, tampoco podrá gestionar el carrito (añadir / quitar productos) ni hacer compras. Sin cuenta registrada no podrá dejar ninguna valoración. Tampoco podrá acceder a packs aparte de para visualizarlos. No tendrá recomendaciones, notificaciones e historial de compras e intercambios.
+
+[RF-CR+CNR-1]: Búsqueda de productos (con filtro):
+El sistema debe permitir a los clientes, tanto registrados como no registrados, consultar el catálogo de productos nuevos y realizar búsquedas sin necesidad de estar autenticados. A dichas búsquedas se podrán aplicar filtros por categoría, precio y rating, y ordenar los resultados según el número de ventas, el número de comentarios o de forma alfabética.
+Los clientes no registrados podrán únicamente consultar la información de los productos; foto, descripción, precio, valoraciones y disponibilidad. Mientras que los clientes registrados, además de realizar búsquedas y aplicar filtros, podrán llevar a cabo acciones adicionales sobre los productos conforme a las funcionalidades permitidas por el sistema.
+
+
+
+2.2 Requisitos No funcionales:
+Persistencia: 
+Ficheros
+Portabilidad: 
+Aplicación debe ejecutarse en: Windows, Linux, Mac
+Confiabilidad: 
+Gestión de errores y pruebas
+Interfaz y Usabilidad: 
+Interfaz intuitiva para distintos usuarios, donde cada uno tenga sus funcionalidades
+Flujos de compra e intercambios deben ser claros
+Seguridad: 
+Acceso mediante contraseñas
+Gestor no puede acceder a las contraseñas de los usuarios
+El acceso a funcionalidades de los empleados está limitado por permisos
+Transacciones de pago
+Fiabilidad:
+El fallo de pago, anula automáticamente la compra
+El stock debe mantenerse consistente
+Un objeto no puede participar en más de un intercambio u oferta
+Tras un intercambio, los objetos desaparecen de la cartera
+Si un carrito caduca, los productos vuelven al stock
+Las valoraciones no caducan
+No se admiten devoluciones
+Restricción:
+Pago: Sólo se acepta los pagos con tarjeta
+Sólo los clientes registrados podrán intercambiar o comprar objetos
+No se admite intercambio con dinero o bonos
+Tecnológico:
+Sólo se permite pagos con tarjeta de librería Java
+Rendimiento:
+La aplicación debe estar preparada para miles de clientes y de usuarios
+Debe gestionar decenas de miles de productos y de intercambios
+El tiempo de respuesta en las búsquedas debe ser aceptable
+El carrito tiene caducidad automática configurable, en principio sin un objeto supera las 48 horas sin comprarse, se quita del carrito
+Disponibilidad 24/7
+3.1 Diagrama de casos de uso
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+El diagrama se imprimirá también aparte aparte para mejorar la vista
+
+
+
+
+
+3.2 Descripción de los casos de uso
+ 
+3.2.1. CASO DE USO 1: Compra de un objeto (o varios) por un usuario
+Actor Primario: Usuario registrado
+Actor Secundario: Empleado con permisos de pedidos
+Interesados y Objetivos:
+Usuario Registrado: Quiere hacer la compra de los objetos de su carrito personal. El carrito puede formar parte de uno o varios objetos que vende la tienda.
+Empleado con permiso de pedidos: Su objetivo es actualizar el estado del pedido (“En preparación”, “Listo para entrega” y “Recogido”), también modifica el stock como consecuencia de la preparación y entrega de pedidos.
+
+Precondiciones: El usuario se ha identificado y autentificado. El carrito del usuario registrado contiene productos con stock previamente reservado y no ha caducado.
+
+Garantía de éxito (Postcondiciones): El pedido se registra en el sistema después de que se acepte el pago. Se genera un número de pedido único y se envía al usuario registrado para mostrar en la recogida. A este usuario registrado se le notifica sobre el estado del pedido cuando está “En preparación” o “Listo para entrega”, el cuál recogerá su pedido en la tienda física mostrando su número de pedido y DNI.
+
+El sistema notifica a los empleados con permisos de pedidos de la existencia de un nuevo pedido pendiente de gestión. Dicha notificación permitirá al empleado acceder al listado de pedidos y consultar la información asociada a cada uno de ellos. Estos empleados proceden a la preparación del pedido, realizando acciones físicas fuera del sistema. Cuando esté listo el pedido, el empleado marcará el pedido con el estado “Listo para entrega”.
+
+Escenario principal de Éxito:
+1. El usuario registrado accede a su carrito seleccionando el botón del carrito en la interfaz.
+2. El usuario pulsa el botón de pagar en la interfaz del carrito.
+3. El usuario introduce los datos de la tarjeta con la que desea pagar
+4. La librería proporcionada para gestionar pagos devuelve un mensaje de que se ha ejecutado el pago con éxito
+5. El sistema genera un número de pedido único, vacía el carrito del usuario, registra el pedido en el fichero de pedidos y notifica tanto al usuario (con su ID de pedido) como a los empleados de pedidos. Los empleados marcan el estado del pedido como “En preparación”.
+6. Los empleados preparan el paquete físicamente en el almacén.
+7. Una vez realizada la preparación, el sistema debe permitir al empleado marcar el pedido con el estado “Listo para entrega”.
+8. El sistema notifica al usuario de que su pedido está listo para su recogida, la notificación contiene el número de pedido y le recuerda que lleve su DNI a la recogida de su pedido en tienda.
+9. El usuario registrado recoge el pedido en tienda y un empleado registra que el pedido ha sido recogido buscando el pedido por número de pedido y DNI.
+10. El sistema elimina el pedido ya recogido de la lista de la lista de pedidos pendientes (del empleado).
+Extensiones (flujos alternativos):
+4.a.1 La librería proporcionada para gestionar pagos devuelve un mensaje de que no se ha ejecutado por falta de saldo (o cualquier otro error).
+4.a.2 El sistema no libera el stock de los productos en el carrito del usuario registrado, tampoco se vacía el carrito del usuario.
+4.a.3 El sistema liberará el stock de los productos y eliminará los productos del carrito del usuario cuando transcurra el tiempo de caducidad propuesto por el gestor.
+
+Requisitos Especiales:
+Restricción en el método de pago: solo se aceptan tarjetas de crédito/débito, no se admite efectivo ni otro tipo de tarjetas
+Es obligatorio la presentación del DNI del cliente e ID del pedido en la tienda para la entrega del pedido.
+No se admiten devoluciones una vez efectuada la compra
+
+Frecuencia de ocurrencia:
+El sistema debe de ser capaz de gestionar manteniendo la consistencia del stock, ya que la aplicación se utiliza por miles de usuarios y contiene decenas de miles de productos.
+
+Temas abiertos:
+¿Se podría plantear la integración con plataformas externas como PayPal o Bizum?
+¿Es necesario que el sistema envíe automáticamente una factura simplificada o ticket en formato PDF (o alguna otra opción) descargable para el usuario?
+
+
+3.2.2. CASO DE USO 2: Intercambio de productos de usuarios independientes
+Actor Primarios: Usuario registrado1 (Subastador), Usuario registrado2 (Ofertante)
+Actor Secundario: Empleado con permisos de intercambios
+Interesados y Objetivos:
+Subastador: El objetivo del subastador es intercambiar su producto de segunda mano a través de la tienda para conseguir uno o varios productos de segunda mano que le interesen de algún ofertante.
+Ofertante: El objetivo del ofertante es intercambiar uno o varios productos de segunda mano para conseguir un producto subastado que le interese.
+Empleado con permiso de intercambios: Su objetivo es dar de alta el intercambio realizado y tasar previamente los productos de tanto el ofertante como el subastador.
+
+Precondiciones: Ambos usuarios y el empleado se han identificado y autentificado. El producto ofrecido del subastador ha sido tasado por algún empleado con permiso de intercambios. Los productos/s que componen la oferta del ofertante también han sido previamente tasados por algún empleado con permiso de intercambios. Todos los productos involucrados en el intercambio no forman parte de ninguna otra oferta ni intercambio. Un empleado con permisos marca el intercambio como “Disponible”. Además, los productos involucrados deban tener:
+Descripción, en formato de texto
+Categoría asignada
+Año del objeto
+Fotografía
+Garantía de éxito (Postcondiciones): El sistema permite al empleado identificar el intercambio y verificar los productos (que estén en las carteras de los clientes) y clientes involucrados. Un empleado con permiso de intercambios debe ser capaz de registrar los intercambios con éxito. El subastador decide la fecha y hora para el intercambio físico y le llega una notificación al ofertante de la fecha y hora. El producto subastado no puede estar caducado (no puede haber pasado la fecha de cuando acaba el intercambio).
+Escenario principal de Éxito:
+1. El ofertante registrado accede a la sección de intercambios.
+2. El ofertante encuentra un producto que sigue en el periodo activo de intercambio al cual decide hacer una oferta con productos tasados de su cartera.
+3. El sistema bloquea los productos involucrados en la oferta hecha por el ofertante para que no se utilicen en ninguna otra oferta.
+4. El subastador recibe una notificación de una oferta al iniciar sesión, con la información de la oferta.
+5. El subastador acepta la oferta propuesta por el ofertante, el intercambio se pone en estado “Aceptado”
+6. El propio sistema fija una fecha y hora para la realización del intercambio en la tienda física.
+7. El sistema notifica al ofertante y al subastador al cual se le ha aceptado una oferta con la fecha y hora del intercambio físico.
+8. Un empleado con permisos de intercambio accede a la fecha y hora del intercambio, ya sea a través de una notificación automática o mediante la consulta del listado de intercambios aceptados
+9. Los clientes involucrados hacen el intercambio físico en la tienda con un empleado con permisos de intercambios presente.
+10. El empleado verifica el estado físico de todos los objetos frente a las fotos del sistema.
+11. El empleado registra que el intercambio ha transcurrido con éxito en el sistema, lo registra como “Realizado”.
+12. Los objetos se intercambian de carteras. El producto del subastador se quita de su cartera y se pone en la del ofertante. Los productos del ofertante se quitan de su cartera y se ponen en la del subastador
+
+
+Extensiones (flujos alternativos):
+4.a.1 El subastador rechaza (o ignora) la oferta del ofertante
+4.a.2 El sistema notifica al ofertante que se ha rechazado su oferta (no ocurre si se ha ignorado)
+4.a.3 El subastador recibe más ofertas de clientes registrados (también puede recibir ofertas de este)
+4.a.4 El subastador acepta alguna de las ofertas de un ofertante
+4.a.5 Se sigue el procedimiento del a partir del paso 5 con el nuevo ofertante (o el mismo si es su oferta la que se acepta).
+4.a.4.b.1 El subastador no acepta ninguna oferta de ningún cliente registrado
+4.a.4.b.2 El periodo del intercambio finaliza, es decir se pasa la fecha fin del intercambio.
+4.a.4.b.3 Un empleado con permiso de intercambios cancela el intercambio y hace que ningún cliente pueda hacer ofertas en dicho intercambio.
+11.a.1 El empleado detecta que un objeto está roto o no es el de la foto, cancela el intercambio en el sistema.
+11.a. 2 El sistema desbloquea los objetos y los devuelve el intercambio al estado “Disponible”
+11.a. 3 El intercambio sigue el transcurso desde el primer paso
+
+Requisitos Especiales:
+El estado del intercambio y la cita deben guardarse en ficheros.
+Un intercambio no implica transacción monetaria sino un intercambio de productos
+Es obligatoria la presencia de ambos usuarios y el empleado para validar el traspaso físico.
+Si pasa la fecha de la cita y no han acudido, el sistema debe permitir al empleado anular el intercambio y liberar los objetos.
+Frecuencia de ocurrencia:
+La frecuencia de ocurrencia se prevé que sea elevada, ya que esta funcionalidad es la que diferencia esta tienda del resto de tiendas en el mismo sector. Como los productos que se ofrecen en los intercambios son únicos el sistema debe ser capaz de gestionar múltiples ofertas simultáneas sobre un mismo producto.
+
+Temas abiertos:
+¿Qué sucede si uno de los dos usuarios no aparece a la cita? ¿Se penaliza al usuario?
+¿Se permite cambiar la fecha de la cita una vez fijada?
+
+
+3.2.3. CASO DE USO 3: Solicitud y tasación de un producto del Usuario
+Actores Primario: Usuario registrado
+Actor Secundario: Empleado con permisos de intercambios.
+Interesados y Objetivos:
+Usuario registrado: Su objetivo es añadir un producto de segunda mano a la cartera para que pueda participar en futuros intercambios (en ofertas o iniciar un intercambio)
+Empleado con permisos de intercambios: Su objetivo es verificar que el producto del usuario es real y comprado en tienda. Además de asignarle un valor y una categoría después de hacer la comprobación física.
+Gestor: Elige lo que le cuesta al usuario tasar su producto.
+
+Precondiciones: El usuario y el empleado se han identificado y autentificado. El producto que desea el usuario que se tase fue comprado previamente en la tienda. El usuario dispone de la información del producto (fotos, descripción, año). El sistema tiene configurado un precio vigente para la tasa de tasación.
+
+Garantía de éxito (Postcondiciones): El usuario ha pagado el precio de la tasación. Posteriormente el producto queda registrado en el sistema en la cartera del usuario, en estado “Disponible”. El producto queda registrado en el sistema con una categoría asignada y un valor estimado por un empleado con permisos de intercambios.
+Escenario principal de Éxito:
+1. El usuario accede a su área personal, en la sección “Mi cartera” donde selecciona “Subir/Tasar producto”.
+2. El sistema muestra el formulario con la información necesaria para subir el producto a la cartera: Nombre, Descripción, Categoría, Año, Estado de conservación. Además, el sistema solicita una foto del producto.
+3. El usuario rellena el formulario con los datos del producto que quiere añadir a su cartera. Adjunta/Sube la foto del producto.
+4. El sistema informa al usuario del precio de la tasación del producto y solicita el pago.
+5. El usuario introduce los datos de su tarjeta para proceder con el pago
+6. La librería de pagos confirma el éxito del pago al sistema
+7. El sistema guarda el producto como “Pendiente de tasación” y genera un código de tasación único para el usuario.
+8. El usuario acude a la tienda física con el objeto y el código.
+9. El empleado accede al sistema, busca la solicitud por el código (o DNI) y recupera la información del producto a tasar.
+10. El empleado inspecciona el objeto físico, verifica que coincide con la foto, comprueba que funciona, determina su categoría y su valor estimado.
+11. El sistema actualiza el producto con toda la información (foto, precio, descripción, etc.) en la cartera del usuario.
+
+
+Extensiones (flujos alternativos):
+10.a.1 El producto traído por el usuario no coincide con el producto para el cual se ha solicitado.
+10.a.1 b El empleado determina que el producto está en un estado en el cual no es posible que se haga un intercambio (está roto o excesivamente dañado).
+10.a.2 El empleado rechaza la tasación en el sistema indicando el motivo.
+
+Requisitos Especiales:
+La tasa se cobra online antes de la labor física del empleado para garantizar el compromiso del usuario. La tasación no puede completarse sin la validación física en tienda de un empleado con permisos de intercambios. Los datos del objeto y su estado deben guardarse en ficheros.
+
+Frecuencia de ocurrencia: Depende de la cantidad de usuarios que quieran hacer intercambios de sus objetos de segunda mano. Las predicciones son que las tasaciones no van a ser extremadamente frecuentes, pero si va a ser algo que los usuarios utilicen de forma puntual, con frecuencia media.
+
+Temas abiertos:
+¿El usuario puede traer varios objetos con un solo pago o es estrictamente que por cada producto que se necesite tasar exista un pago previo?
+¿Existe un plazo máximo para ir a la tienda tras pagar la tasa?
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maquetas:
+
+Log In / Registro para usuarios:
+En la interfaz para hacer Log in, siempre se les va a dar a los usuarios la opción de registrarse por si acaso no lo están aún. La idea es que rellenen los campos y después le den al botón para entrar. En el caso del registro, tendrán que rellenarlo con los requisitos que se piden.
+
+Figura 1
+
+
+Cliente Registrado:
+Interfaz de Tienda
+Esta interfaz es igual que la del gestor, pero no tiene la opción ni de modificar los productos ni de entrar en las estadísticas. Además, una vez dentro de los ajustes, la interfaz también es distinta, ya que hay muchas cosas que no puede modificar. Un cliente registrado tiene 2 interfaces principales (Interfaz de Tienda e Interfaz de Intercambios)
+
+Figura 2
+
+
+Es importante destacar los distintos botones a los que puede acceder el cliente:
+
+
+Ver notificaciones (Figuras 2.4, 2.4.1, 2.4.2)
+
+Realizar una búsqueda, usando un filtro (Figura 2.5)
+
+Ajustes de Cuenta (Figura 2.6)
+
+Ver carrito de Compra (Figura 2.7)
+
+Acceder a Área Personal (Figura 2.8)
+
+
+
+Interfaz Información Productos en Venta
+Este caso aparece cuando hacemos clic en un objeto del catálogo de ventas. Aparece una fotografía del producto, su nombre y precio, una descripción y, por último, el botón de añadir al carrito (Figura 2.7).
+
+
+Figura 2.1
+
+
+
+
+Interfaz de Intercambios
+Esta interfaz es la misma que la de ventas, solo cambian los objetos y la información de cada uno de ellos. Dentro de los recuadros aparece:
+→ El nombre de lo que se ofrece
+→ Una foto para ver el estado. En la maqueta es una foto del original pero aquí se pone la foto que suben los usuarios
+→ Categoría a la que pertenece
+→ Pequeña descripción del objeto que se ofrece
+Por último, en la esquina inferior derecha, aparece el objeto que se pide.
+Al hacer clic en un objeto, aparece la interfaz de la Figura 2.3.
+
+
+Figura 2.2
+
+
+
+
+Interfaz Información Productos en Intercambio
+Este caso aparece cuando hacemos clic en un objeto del catálogo de intercambios. Aparece lo mismo que en el de las ventas, pero se añade lo que se pide y el estado del objeto.
+
+Figura 2.3
+
+Interfaz Realización de Oferta de Intercambio
+Al pulsar el botón de Realizar Oferta aparece esta interfaz con todos los objetos de la cartera del usuario. Estos son todos los objetos posibles, al seleccionar uno, se oscurece el recuadro y aparece el orden en el que los has seleccionado. En este caso solo está marcado el primer cómic. Al pulsar el botón de realizar oferta, se envía la oferta directamente.
+
+Figura 2.3.1
+
+Ver Notificaciones
+Estas son todas las pestañas de notificaciones que puede ver un usuario registrado.
+
+Figura 2.4
+
+
+
+Figura 2.4.1
+
+
+
+
+Figura 2.4.2
+
+
+
+
+Interfaz Información Sobre pedido
+Al hacer clic sobre una notificación sobre un pedido que ya se ha preparado, aparece esta interfaz con los datos sobre los productos del pedido, el precio total, cuándo se realizó el pedido, cuándo se terminó de preparar y el ID para ir a recogerlo.
+
+Interfaz para Valorar Producto
+Una vez comprado un producto, aparece esta interfaz en la que el usuario valora el pedido del 1 al 5 y puede escribir un texto explicando por qué esa valoración.
+
+Interfaz Buscador
+Al hacer clic en el icono de los filtros se abrirá esta pestaña. Al marcar la casilla de activar filtro, este filtro entrará en vigencia. En las categorías aparecería una lista de categorías, una vez seleccionas una, aparecerán sus hijos con el mismo formato.
+
+Figura 2.5
+
+
+
+
+
+Ajustes de Cuenta
+En esta interfaz vemos los ajustes de un cliente registrado. Aquí permitimos el cambio de contraseña, cambio de idioma (a elegir entre: Español, Inglés y Francés) y por último un botón para cerrar sesión. También permitimos volver al menú principal con la flecha localizada en la esquina superior izquierda.
+
+Figura 2.6
+
+
+
+
+
+
+
+Ver Carrito de Compra
+La interfaz con el carrito abierto cambia en que aparece esta pestaña a la derecha, en la cual aparece la información de lo que hemos añadido. En este caso hay un Catán y un cómic de Astérix y Obelix. Al darle al “+” al lado del número de elementos podemos añadir uno más de ese objeto, y si le das al “-” restas uno. En este caso, si le restas 1, este objeto se eliminaría del carrito. En la información de abajo aparece el precio base total de todos los productos, es decir, sin descuentos; luego, el precio que se resta debido a los descuentos de los productos que hay añadidos y, por último, el  botón de tramitar pedido, el cual contiene el precio total a pagar con los descuentos aplicados. Al pinchar el botón, nos llevaría a la pestaña del pago (Figura 2.7.1). La cruz de arriba a la derecha es para salir del carrito por si quieres seguir comprando. La basura es para eliminar por completo el carrito.
+
+Figura 2.7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Interfaz para ver la Información del Pedido
+Una vez el cliente haya tramitado el pedido, se le mostrará una pestaña como la de debajo. Donde podrá ver el estado de su pedido y el resumen de lo que ha comprado. Como podemos ver en la parte de la derecha (las cajas amarillas), las 3 primeras son botones que harán lo que indica su título, la última caja es simplemente un aviso.
+
+Figura 2.7.1
+
+
+
+Ver Área Personal
+En el área personal del cliente, éste podrá ver sus datos personales (nombre, nickname, rol y fecha que se dio de alta), así como modificar sus datos de la tarjeta bancaria. También puede consultar el historial de pedidos, esto incluye el botón “Ver Pedido”, que nos redirigirá a la Figura 2.7.1. Por último, permite ver la cartera de objetos del cliente, esto es lo que se ve en la Figura 2.9
+
+Figura 2.8
+
+
+
+Interfaz Cartera
+La flecha de arriba a la izquierda es para volver al catálogo de objetos (Figura 2). El icono de la derecha es el de información de cuenta (Figura 2.8). En la parte central e inferior aparecen los objetos de la cartera con sus respectivas fotos, categorías, descripción, estado y precio. Si haces clic en uno de los objetos, la interfaz es la misma que la del intercambio, quitando el botón de realizar oferta y el objeto que se pide (Figura 2.3). También, se observa que el primer objeto está en intercambio hasta el 12/02/2026 y tiene 3 ofertas. 
+
+Figura 2.9
+
+
+
+
+Aceptar o Rechazar Ofertas
+Si haces clic en el número, entras al menú de ofertas de ese objeto. En este, aparece el nombre de la persona que realiza la oferta, una imagen del objeto principal de la oferta (el más caro) y en el caso de que haya más de un objeto en esa oferta, aparece un número al lado del nombre de ese objeto indicando cuántos más objetos hay. Si haces clic en el tick aceptas la oferta y se cierra el intercambio y, si haces clic en la cruz se rechaza esa oferta y se elimina automáticamente. Si haces clic en el objeto, aparece una descripción como la de la cartera (Figura 2.3). La interfaz de las ofertas realizadas por el usuario es exactamente igual pero quitando los ticks, si el usuario le da a la cruz, se cancela la oferta.
+
+
+Figura 2.9.1
+
+
+
+
+Interfaz Añadir Objeto a Cartera
+Al pulsar el botón de añadir objeto, se abre esta pestaña donde se tienen que rellenar estos datos y, posteriormente, solicitar la tasación del precio y estado. Posteriormente, llegará una notificación al apartado de “Tus intercambios y compras”.
+
+Figura 2.9.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cliente No Registrado:
+Interfaz Cliente no Registrado
+Es muy parecida a la interfaz de inicio de un cliente registrado, pero le quita el permiso de ver notificaciones, ajustes, carrito e información de la cuenta, ya que estas funciones son exclusivas de los clientes registrados. El cliente no registrado también puede:
+→ Ver el catálogo de objetos y usar el filtro, como hacemos en la Figura 2.5
+→ Iniciar Sesión o Registrarse, como hacemos en la Figura 1
+
+
+Figura 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Empleado:
+Interfaz de Empleado
+Todos los empleados tendrán la misma interfaz, para diferenciar los distintos permisos que tiene cada empleado, usaremos los iconos de la esquina superior derecha, siendo:
+
+Permiso de Productos
+
+Permiso de Pedidos
+
+Permiso de Intercambios
+
+
+
+Figura 4
+
+
+
+Sólo los empleados con los permisos adecuados podrán acceder a esos botones, si un empleado que sólo tiene permiso de intercambio, intenta acceder al botón de productos o pedidos aparecerá el aviso:
+
+
+Ajustes de cualquier empleado → Es igual que el Cliente Registrado (Figura 2.6)
+
+4.1: Permiso de Productos:
+Interfaz Empleado con Permiso de Productos
+Cambios respecto a la interfaz anterior: Se puede ver el stock de cada producto a la derecha del nombre, el botón a la izquierda es para introducir el objeto en un pack. Más tarde iría al botón de arriba a la derecha, el de la caja y le pondría el precio, nombre y descripción y lo daría de alta. Los botones para editar sirven para modificar tanto el nombre como la descripción de un objeto. También está el botón de añadir objeto, con el cual se abre la interfaz para añadir un objeto.
+
+Figura 4.1.1
+
+
+4.2: Permiso de Pedidos:
+Notificaciones:
+Estos empleados solo reciben avisos de los pedidos que tienen que preparar y, si hacen clic en el aviso, pueden enviar una notificación al usuario que lo ha pedido
+
+Figura 4.2.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Panel principal de Permiso de Pedidos(click al símbolo de Pedidos)
+El empleado podrá ver los pedidos que se han hecho y cambiar su estado a “Pedido Listo” o “Recogido”. Por otro lado, también podrá consultar y modificar el stock de un producto cuando sea necesario.
+
+Figura 4.2.2
+
+
+
+
+4.3: Permiso de Intercambios:
+Notificaciones
+Como la interfaz de las ventas y los intercambios es igual que la de los clientes, esta es la interfaz para dar de alta un intercambio, al hacer clic puede ver información sobre el intercambio. Si el empleado le da a la cruz, eliminará esta notificación. Una vez leída (pinchando) se quitará la negrita de la letra.
+
+Figura 4.3.1
+
+Al hacer clic en una de estas notificaciones, esta será la interfaz:
+
+Figura 4.3.2
+
+Panel principal de Permiso de Intercambio (click al símbolo de intercambio)
+Esto es lo que verán los empleados que tengan permiso de intercambio, primero podrán ver una tabla con todos los objetos para tasar, es decir, poner un estado y un precio. Por otro lado, existe otra tabla de Intercambios que se usará para aceptar / cancelar intercambios de clientes.
+
+Figura 4.3.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gestor:
+Interfaz Gestor
+
+Figura 5
+
+
+Distintos botones a los que puede acceder el gestor:
+
+ Añadir un objeto
+
+Ver Estadísticas (Figura 5.2)
+
+Realizar una búsqueda, usando un filtro: (Figura 2.5)
+
+Ajustes de Cuenta (Figura 2.6)
+
+Acceder a Área Personal (Figura 2.8)
+
+
+Interfaz Modificar Producto
+Al clicar en el icono de modificar un objeto (varita mágica), al gestor le aparecerá esta pestaña en la que podrá modificar todos los parámetros de un producto. Si el empleado pulsa el “+”, puede añadir una categoría nueva.
+
+Figura 5.1
+
+
+Aquí, se puede elegir si puede ser una categoría sin padre, y se observa también la jerarquización de categorías.
+
+Figura 5.2
+Interfaz Estadísticas gestor
+Estas son todas las interfaces de las estadísticas que puede ver el gestor en el apartado de estadísticas:
+
+Figura 5.2
+
+
+
+Figura 5.2.1
+
+
+
+
+
+Figura 5.2.2
+
+
+
+Ajustes del Gestor
+En los ajustes del gestor, éste podrá modificar su contraseña, cambiar de idioma y cerrar sesión (mismos ajustes que un usuario registrado). Lo que le diferencia del resto es que también puede modificar la tasa en euros, para que en el futuro un cliente registrado pueda tasar un producto de su cartera. Por otro lado, también puede ajustar la cantidad de productos que se recomendarían a un usuario registrado. Otras de las funcionalidades que tienen los gestores, es poder modificar el tiempo límite tanto de los carritos como de los intercambios, puede elegir entre hora(s)/día(s) con el valor que quiera. Por otro lado, si el carrito de un usuario supera x cantidad de euros, se aplicará un descuento, ya sea por cantidad de euros o que la tienda regala uno de sus objetos, sólo se puede uno de ellos. Por último, hay un botón que accede a un listado de empleados Figura 5.4
+
+Figura 5.3
+
+
+
+
+
+
+
+
+
+
+Interfaz del Gestor para Editar y añadir empleados
+Esta es la lista de empleados, en la cual aparece cada empleado con sus permisos. El botón de editar sirve para editar todos los campos de un empleado y el de añadir, abre una pestaña con todos los campos para dar de alta a un empleado
+
+Figura 5.4
+
+
+Así es la interfaz cuando pincha sobre el botón de editar del empleado Javier Pérez
+
+Figura 5.4.1
+
+
+
+Por último, esta es la interfaz para dar de alta a un empleado.
+
+Figura 5.4.2
+
+
+
+
+
+
+
+Área Personal (Gestor)
+En esta sección, el gestor tendrá acceso a su área personal, donde a parte de ver sus propios datos, podrá ver su actividad reciente, como es la preparación de productos o el trabajo de otros empleados. También puede ver las ventas de hoy (también accesible desde las estadísticas en la interfaz principal), así cómo qué productos no tienen stock.
+
+Figura 5.5
+
+
+
+
+
