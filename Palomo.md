@@ -44,3 +44,5 @@ Cliente
 - rechazar oferta => notificar al ofertante
 - fin intercambio: al llegar la fecha de fin, notificar al subastador; tras 7 días desde la fecha de fin sin aceptar oferta ni prorrogar, cancelar el intercambio
 - prorrogar intercambio (establecer nueva fecha de fin)
+
+- No se implementa filtrado colaborativo ni basado en similaridad de productos
